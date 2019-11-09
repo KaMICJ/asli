@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hiro Negar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .dash {
+            background-color: rgba(0, 0, 0, 0.81);
+        }
+        .box-shadow-black{
+            box-shadow: 1px 1px 5px 5px black;
+        }
+        .display-none {
+            display: none !important;
+        }
+
+        .font-size {
+            font-size: 25px !important;
+        }
+
+        .mt {
+            margin-top: 50px !important;
+        }
+
+        .filter-cadr>i {
+            margin-left: 7px;
+        }
+
+        .menu-1 {
+            position: fixed !important;
+            z-index: 700;
+        }
+
+        .mb {
+            margin-bottom: 10px;
+        }
+
+        .mt {
+            margin-top: 20px !important;
+        }
+
+        .boxs {
+            border: 2px solid black;
+            border-radius: 20px;
+            background-color: #211f1f;
+            box-shadow: 1px 1px 3px 3px white;
+            /*            height: 50px;*/
+        }
+
+        .padding {
+            padding: 20px !important;
+        }
+        .box-shadow-gray{
+            box-shadow: 1px 1px 5px 5px rgba(69, 65, 65, 0.85);
+        }
+    </style>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/acme.css">
+    <link rel="stylesheet" href="css/hiro.css">
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="menu bg-gray-900 navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="bang sidebar-brand-icon">
+                    <div class="bang">
+                        <img src="image/WhatsApp_Image_2019-09-01_at_16-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <!--        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>-->
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="i-font fas fa-fw fa-tachometer-alt icon-stats-bars2"></i>
+                    <span class="span-icon">Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Heading -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <!--
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="i-font fas fa-fw fa-cog icon-podcast"></i>
+                    <span class="span-icon">Receiver Status</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+-->
+            <!--
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Receiver Status:</h6>
+                        <a class="collapse-item" href="activity.html">Activity</a>
+                        <a class="collapse-item" href="position.html">Position</a>
+                        <a class="collapse-item" href="graphs.html">Graphs</a>
+                        <a class="collapse-item" href="vector.html">Vector</a>
+                        <a class="collapse-item" href="identity.html">Identity</a>
+                        <a class="collapse-item" href="receiver.html">Receiver</a>
+                    </div>
+-->
+            <!--
+                </div>
+            </li>
+-->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!--
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="i-font fas fa-fw fa-wrench icon-feed"></i>
+                    <span class="span-icon">Satellites</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+-->
+            <!--
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Satellites:</h6>
+                        <a class="collapse-item" href="general.html">General</a>
+                        <a class="collapse-item" href="tracking.html">Tracking</a>
+                        <a class="collapse-item" href="enable-disable.html">Enable/Disable</a>
+                    </div>
+-->
+            <!--
+                </div>
+            </li>
+-->
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Charts -->
+            <!--
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                    <i class="i-font fas fa-fw fa-folder icon-cogs"></i>
+                    <span class="span-icon">Receiver Configuration</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+-->
+            <!--
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Res Config:</h6>
+                        <a class="collapse-item" href="summer.html">Summar</a>
+                        <a class="collapse-item" href="attena.html">Attena</a>
+                        <a class="collapse-item" href="reference.html">Reference Station</a>
+                        <a class="collapse-item" href="receiver-tracking.html">Tracking</a>
+                        <a class="collapse-item" href="correction.html">Correction Controls</a>
+                        <a class="collapse-item" href="receiver-position.html">Position</a>
+                        <a class="collapse-item" href="rest.html">Rest</a>
+                    </div>
+-->
+            <!--
+                </div>
+            </li>
+-->
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="master.html">
+                    <i class="i-font fas fa-fw icon-tree"></i>
+                    <span class="span-icon">Network Configuration</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="i-font fas fa-fw icon-loop"></i>
+                    <span class="span-icon">I/O Configuration</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="i-font fas fa-fw icon-lock"></i>
+                    <span class="span-icon">Security</span></a>
+            </li>
+            <!--            <hr class="sidebar-divider">-->
+            <!-- Nav Item - Tables -->
+
+            <!-- Divider -->
+            <!--        <hr class="sidebar-divider d-none d-md-block">-->
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <!--
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+-->
+
+        </ul>
+        <!-- End of Sidebar -->
+        <ul class="menu-1 menu bg-gray-900 navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="bang sidebar-brand-icon">
+                    <div class="bang">
+                        <img src="image/WhatsApp_Image_2019-09-01_at_16-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <!--        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>-->
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link dash" href="index.html">
+                    <i class="i-font fas fa-fw fa-tachometer-alt icon-stats-bars2"></i>
+                    <span class="span-icon">Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Heading -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="rec nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="i-font fas fa-fw fa-cog icon-podcast"></i>
+                    <span class="span-icon">Receiver Status</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Receiver Status:</h6>
+                        <a class="collapse-item" href="activity.html">Activity</a>
+                        <a class="collapse-item" href="position.html">Position</a>
+                        <a class="collapse-item" href="graphs.html">Graphs</a>
+                        <a class="collapse-item" href="vector.html">Vector</a>
+                        <a class="collapse-item" href="identity.html">Identity</a>
+                        <!--                        <a class="collapse-item" href="receiver.html">Receiver</a>-->
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="sat nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="i-font fas fa-fw fa-wrench icon-feed"></i>
+                    <span class="span-icon">Satellites</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Satellites:</h6>
+                        <a class="collapse-item" href="general.html">General</a>
+                        <a class="collapse-item" href="tracking.html">Tracking</a>
+                        <a class="collapse-item" href="enable-disable.html">Enable/Disable</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="config nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                    <i class="i-font fas fa-fw fa-folder icon-cogs"></i>
+                    <span class="span-icon">Receiver Configuration</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Res Config:</h6>
+                        <a class="collapse-item" href="summer.html">Summar</a>
+                        <a class="collapse-item" href="attena.html">Attena</a>
+                        <a class="collapse-item" href="reference.html">Reference Station</a>
+                        <a class="collapse-item" href="receiver-tracking.html">Tracking</a>
+                        <a class="collapse-item" href="correction.html">Correction Controls</a>
+                        <a class="collapse-item" href="receiver-position.html">Position</a>
+                        <a class="collapse-item" href="rest.html">Rest</a>
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="network.html">
+                    <i class="i-font fas fa-fw icon-tree"></i>
+                    <span class="span-icon">Network Configuration</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="i-o.html">
+                    <i class="i-font fas fa-fw icon-loop"></i>
+                    <span class="span-icon">I/O Configuration</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="security.html">
+                    <i class="i-font fas fa-fw icon-lock"></i>
+                    <span class="span-icon">Security</span></a>
+            </li>
+            <!--            <hr class="sidebar-divider">-->
+            <!-- Nav Item - Tables -->
+
+            <!-- Divider -->
+            <!--        <hr class="sidebar-divider d-none d-md-block">-->
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content" class="bg-gray-800">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-gray-900 topbar mb-4 static-top shadow">
+                    <div class="filter-cadr col-md-3 no-arrow">
+                        <span class="icon-filter">
+                        </span>
+                        <i class="text-gray-200">Filters</i>
+                        <span class="ctrl icon-ctrl"></span>
+                    </div>
+                    <div class="dashboard col-md-5">
+                        <p class="text-gray-200">Dashboard</p>
+                    </div>
+                    <div class="time col-md-4">
+                        <div id="demo" class="col-md-7 text-gray-200">
+                        </div>
+                        <div class="user-panel col-md-5">
+                            <span class="user icon-user col-md-12 text-gray-200"></span>
+                        </div>
+                    </div>
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <!--                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">-->
+                            <div class="input-group-append">
+                                <!--
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+-->
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <!--                    <ul class="navbar-nav ml-auto">-->
+                    <!--
+                        <div class="filter">
+                            <div class="filter-cadr col-md-6 no-arrow">
+                                <span class="icon-filter">
+                                </span>
+                                <i>Filters</i>
+                                <span class="ctrl icon-ctrl"></span>
+                            </div>
+                            <div class="dashboard col-md-6">
+                                <p>Dashboard</p>
+                            </div>
+                            <div class="time col-md-4">
+                                <div id="demo" class="col-md-7">
+
+                                </div>
+                                <div class="user-panel col-md-5">
+                                    <span class="user icon-user"></span>
+                                </div>
+                            </div>
+                        </div>
+-->
+
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                    <!--
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                             Dropdown - Messages 
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+-->
+
+                    <!-- Nav Item - Alerts -->
+                    <!--
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                 Counter - Alerts 
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                             Dropdown - Alerts 
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+-->
+
+                    <!-- Nav Item - Messages -->
+                    <!--
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                 Counter - Messages 
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                             Dropdown - Messages 
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+-->
+
+                    <!--                        <div class="topbar-divider d-none d-sm-block"></div>-->
+
+                    <!-- Nav Item - User Information -->
+                    <!--
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                            </a>
+                             Dropdown - User Information 
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+-->
+                    <!--
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+-->
+
+                    <!--                    </ul>-->
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <!--                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>-->
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row boxs mb">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4 mt">
+                            <div class="card border-left-info shadow py-2">
+                                <div class="parent-p card-body">
+                                    <p>Tracked Satellites</p>
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800 icon-feed"></div>
+                                                </div>
+                                                <div class="num col">
+                                                    <span>22</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box-2 col-auto">
+                                            <div class="mosalas"></div>
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4 mt">
+                            <div class="card border-left-success shadow py-2">
+                                <div class="parent-p card-body">
+                                    <p>Target Server</p>
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800 icon-database"></div>
+                                                </div>
+                                                <div class="dep col mr-2">
+                                                    <div class="h5 font-weight-bold text-primary text-uppercase mb-1">45.252.144.14</div>
+                                                    <div class="parent-circle mb-0 font-weight-bold text-gray-800 online"><span class="circle"></span>online</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div id="box-3" class="col-xl-3 col-md-6 mb-4 mt">
+                            <div class="card border-left-primary shadow h-50 py-2">
+                                <!--
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+-->
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example -->
+                        <div id="box-4" class="col-xl-3 col-md-6 mb-4 mt">
+                            <div class="card border-left-warning shadow h-50 py-2">
+                                <!--
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+
+                    <div class="row mt box-shadow-black">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-12 col-lg-12 mt">
+                            <div class="card shadow mb-4 padding">
+                                <div id="systemsDiv"><b>Type:</b>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="checkbox" name="sys_GPS" id="sys_GPS" onclick="updateSignals()" checked="on">GPS (G)</td>
+                                                <td><input type="checkbox" name="sys_SBAS" id="sys_SBAS" onclick="updateSignals()" checked="on">SBAS (S)</td>
+                                                <td><input type="checkbox" name="sys_Glonass" id="sys_Glonass" onclick="updateSignals()" checked="on">GLONASS (R)</td>
+                                                <td><input type="checkbox" name="sys_Galileo" id="sys_Galileo" onclick="updateSignals()" checked="on">Galileo (E)</td>
+                                                <td><input type="checkbox" name="sys_Beidou" id="sys_Beidou" onclick="updateSignals()" checked="on">BeiDou (B)</td>
+                                                <td><input type="checkbox" name="sys_QZSS" id="sys_QZSS" onclick="updateSignals()" checked="on">QZSS (J)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="signalsDiv">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="border-left:solid 16px #0000ff">&nbsp;<input type="checkbox" name="signal_L1_0" id="signal_L1_0" onclick="updateSignals()" checked="on">L1 CA/BOC</td>
+                                                <td style="border-left:solid 16px #00f000">&nbsp;<input type="checkbox" name="signal_L1EP_0" id="signal_L1EP_0" onclick="updateSignals()">L1 P</td>
+                                                <td style="border-left:solid 16px #00ffff">&nbsp;<input type="checkbox" name="signal_L1C_0" id="signal_L1C_0" onclick="updateSignals()">L1C</td>
+                                                <td style="border-left:solid 16px #ff0000">&nbsp;<input type="checkbox" name="signal_L2EP_0" id="signal_L2EP_0" onclick="updateSignals()">L2 E</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border-left:solid 16px #ffa500">&nbsp;<input type="checkbox" name="signal_L2C_0" id="signal_L2C_0" onclick="updateSignals()">L2 C/CA / B2</td>
+                                                <td style="border-left:solid 16px #aa8866">&nbsp;<input type="checkbox" name="signal_E5Alt_0" id="signal_E5Alt_0" onclick="updateSignals()">E5-AltBOC</td>
+                                                <td style="border-left:solid 16px #6688aa">&nbsp;<input type="checkbox" name="signal_E5B_0" id="signal_E5B_0" onclick="updateSignals()">L3 / E5B</td>
+                                                <td style="border-left:solid 16px #ff00ff">&nbsp;<input type="checkbox" name="signal_L5_0" id="signal_L5_0" onclick="updateSignals()">L5 / E5A</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border-left:solid 16px #f0e68c">&nbsp;<input type="checkbox" name="signal_L1SLAS_0" id="signal_L1SLAS_0" onclick="updateSignals()">L1S</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <svg class="col-md-12" height="350">
+                                    <defs></defs><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="70" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-10.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">R2</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="70" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">16°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="115.86206896551724" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-10.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G2</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="115.86206896551724" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">31°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="161.72413793103448" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-10.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">R3</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="161.72413793103448" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">57°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="207.58620689655172" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-9.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E3</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="207.58620689655172" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">37°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="253.44827586206895" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-10.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G5</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="253.44827586206895" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">64°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="299.31034482758616" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-9.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E5</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="299.31034482758616" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">40°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="345.17241379310343" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-10.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">R9</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="345.17241379310343" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">20°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="391.0344827586207" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G12</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="391.0344827586207" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">16°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="436.8965517241379" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G13</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="436.8965517241379" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">19°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="482.7586206896551" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E13</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="482.7586206896551" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-11.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">11°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="528.6206896551723" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G15</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="528.6206896551723" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">15°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="574.4827586206897" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E15</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="574.4827586206897" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">57°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="620.3448275862069" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">R17</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="620.3448275862069" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-11.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">11°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="666.2068965517241" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">R18</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="666.2068965517241" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">51°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="712.0689655172414" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">R19</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="712.0689655172414" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">49°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="757.9310344827586" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">B19</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="757.9310344827586" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">13°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="803.7931034482758" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">B20</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="803.7931034482758" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">56°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="849.655172413793" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G21</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="849.655172413793" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">21°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="895.5172413793102" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E21</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="895.5172413793102" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">13°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="941.3793103448276" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G25</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="941.3793103448276" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">39°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="987.2413793103448" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G26</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="987.2413793103448" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-11.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">11°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1033.1034482758619" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E27</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1033.1034482758619" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">30°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1078.9655172413793" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G29</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1078.9655172413793" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">66°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1124.8275862068965" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">B29</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1124.8275862068965" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">58°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1170.6896551724137" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">B30</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1170.6896551724137" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">59°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1216.551724137931" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E30</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1216.551724137931" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">18°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1262.4137931034481" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-18.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">S131</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1262.4137931034481" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">42°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1308.2758620689654" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-18.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">S138</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1308.2758620689654" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">44°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="310" text-anchor="center" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">10</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="256" text-anchor="center" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">20</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="202" text-anchor="center" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">30</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="148" text-anchor="center" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">40</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="94" text-anchor="center" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">50</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="40" text-anchor="center" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">60</text>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="70" y1="40" x2="70" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="115.86206896551724" y1="40" x2="115.86206896551724" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="161.72413793103448" y1="40" x2="161.72413793103448" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="207.58620689655172" y1="40" x2="207.58620689655172" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="253.44827586206895" y1="40" x2="253.44827586206895" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="299.31034482758616" y1="40" x2="299.31034482758616" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="345.17241379310343" y1="40" x2="345.17241379310343" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="391.0344827586207" y1="40" x2="391.0344827586207" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="436.8965517241379" y1="40" x2="436.8965517241379" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="482.7586206896551" y1="40" x2="482.7586206896551" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="528.6206896551723" y1="40" x2="528.6206896551723" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="574.4827586206897" y1="40" x2="574.4827586206897" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="620.3448275862069" y1="40" x2="620.3448275862069" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="666.2068965517241" y1="40" x2="666.2068965517241" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="712.0689655172414" y1="40" x2="712.0689655172414" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="757.9310344827586" y1="40" x2="757.9310344827586" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="803.7931034482758" y1="40" x2="803.7931034482758" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="849.655172413793" y1="40" x2="849.655172413793" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="895.5172413793102" y1="40" x2="895.5172413793102" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="941.3793103448276" y1="40" x2="941.3793103448276" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="987.2413793103448" y1="40" x2="987.2413793103448" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1033.1034482758619" y1="40" x2="1033.1034482758619" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1078.9655172413793" y1="40" x2="1078.9655172413793" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1124.8275862068965" y1="40" x2="1124.8275862068965" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1170.6896551724137" y1="40" x2="1170.6896551724137" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1216.551724137931" y1="40" x2="1216.551724137931" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1262.4137931034481" y1="40" x2="1262.4137931034481" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1308.2758620689654" y1="40" x2="1308.2758620689654" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="30" y1="40" x2="30" y2="310" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1360" y1="40" x2="1360" y2="310" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="40" x2="1360" y2="40" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="67" x2="1360" y2="67" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="94" x2="1360" y2="94" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="121" x2="1360" y2="121" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="148" x2="1360" y2="148" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="175" x2="1360" y2="175" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="202" x2="1360" y2="202" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="229" x2="1360" y2="229" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="256" x2="1360" y2="256" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="283" x2="1360" y2="283" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="30" y1="310" x2="1360" y2="310" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="55" y="122.61999999999998" width="30" height="187.38000000000002" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="100.86206896551724" y="115.6" width="30" height="194.4" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="146.72413793103448" y="98.85999999999999" width="30" height="211.14000000000001" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="192.58620689655172" y="109.11999999999998" width="30" height="200.88000000000002" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="238.44827586206895" y="97.24000000000001" width="30" height="212.76" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="284.31034482758616" y="103.72" width="30" height="206.28" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="330.17241379310343" y="131.26" width="30" height="178.74" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="376.0344827586207" y="123.16" width="30" height="186.84" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="421.8965517241379" y="142.06" width="30" height="167.94" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="467.7586206896551" y="149.61999999999998" width="30" height="160.38000000000002" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="513.6206896551723" y="130.72" width="30" height="179.28" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="559.4827586206897" y="102.63999999999999" width="30" height="207.36" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="605.3448275862069" y="136.66" width="30" height="173.34" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="651.2068965517241" y="96.16" width="30" height="213.84" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="697.0689655172414" y="144.76" width="30" height="165.24" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="742.9310344827586" y="159.88000000000002" width="30" height="150.11999999999998" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="788.7931034482758" y="104.25999999999999" width="30" height="205.74" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="834.655172413793" y="143.14000000000001" width="30" height="166.85999999999999" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="880.5172413793102" y="137.74" width="30" height="172.26" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="926.3793103448276" y="124.78000000000003" width="30" height="185.21999999999997" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="972.2413793103448" y="144.21999999999997" width="30" height="165.78000000000003" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1018.1034482758619" y="111.81999999999996" width="30" height="198.18000000000004" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1063.9655172413793" y="95.61999999999998" width="30" height="214.38000000000002" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1109.8275862068965" y="110.19999999999999" width="30" height="199.8" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1155.6896551724137" y="101.56" width="30" height="208.44" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1201.551724137931" y="122.61999999999998" width="30" height="187.38000000000002" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1247.4137931034481" y="129.64000000000001" width="30" height="180.35999999999999" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                    <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1293.2758620689654" y="117.21999999999997" width="30" height="192.78000000000003" ry="0" rx="0" fill-rule="evenodd"></rect><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="695" y="30" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-45.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="bold" font-size="16px" font-family="Arial">C/No Vs. SV</text>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Pie Chart -->
+                        <!--
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                 Card Header - Dropdown 
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                 Card Body 
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="myPieChart"></canvas>
+                                    </div>
+                                    <div class="mt-4 text-center small">
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-primary"></i> Direct
+                                        </span>
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-success"></i> Social
+                                        </span>
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-info"></i> Referral
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+-->
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row mt box-shadow-gray">
+
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4 mt">
+
+                            <!-- Project Card Example -->
+                            <div class="mahvare-1 col-md-12">
+                                <div class="keshvar">
+                                    <p>Satellites Tracked / Acquired</p>
+                                    <div class="keshvar-item col-md-12">
+                                        <div class="img-keshvar gps"></div>
+                                        <span class="gps-ragham">7</span>
+                                        <div class="load col-md-12">
+                                            <div class="load-1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="keshvar-item col-md-12">
+                                        <div class="img-keshvar glonass"></div>
+                                        <span class="glonass-ragham">9</span>
+                                        <div class="load col-md-12">
+                                            <div class="load-2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="keshvar-item col-md-12">
+                                        <div class="img-keshvar galileo"></div>
+                                        <span class="galileo-ragham">2</span>
+                                        <div class="load col-md-12">
+                                            <div class="load-3"></div>
+                                        </div>
+                                    </div>
+                                    <div class="keshvar-item col-md-12">
+                                        <div class="img-keshvar beidou"></div>
+                                        <span class="beidou-ragham">1</span>
+                                        <div class="load col-md-12">
+                                            <div class="load-4"></div>
+                                        </div>
+                                    </div>
+                                    <div class="keshvar-item col-md-12">
+                                        <div class="img-keshvar sbas"></div>
+                                        <span class="sbas-ragham">3</span>
+                                        <div class="load col-md-12">
+                                            <div class="load-5"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+-->
+
+                            <!-- Color System -->
+                            <!--
+                            <div class="row">
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-primary text-white shadow">
+                                        <div class="card-body">
+                                            Primary
+                                            <div class="text-white-50 small">#4e73df</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-success text-white shadow">
+                                        <div class="card-body">
+                                            Success
+                                            <div class="text-white-50 small">#1cc88a</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-info text-white shadow">
+                                        <div class="card-body">
+                                            Info
+                                            <div class="text-white-50 small">#36b9cc</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-warning text-white shadow">
+                                        <div class="card-body">
+                                            Warning
+                                            <div class="text-white-50 small">#f6c23e</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-danger text-white shadow">
+                                        <div class="card-body">
+                                            Danger
+                                            <div class="text-white-50 small">#e74a3b</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-secondary text-white shadow">
+                                        <div class="card-body">
+                                            Secondary
+                                            <div class="text-white-50 small">#858796</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+-->
+
+                        </div>
+
+                        <div class="col-lg-6 mb-4 mt">
+                            <div class="mahvare-2 col-md-12">
+                                <div class="madar-dayere">
+                                    <div class="rect col-md-12">
+                                        <div id="chart" style='width: 400px; height: 400px; padding-left: 5px; padding-bottom: 5px;'></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; Hiro Negar</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/morris/morris.min.js"></script>
+    <script src="js/raphael/raphael.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script>
+        var deg2rad = Math.PI / 180;
+        var width = 400,
+            height = 350,
+            radius = Math.min(width, height) / 2 - 30;
+
+        var svg = d3.select("#chart").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        var r = d3.scale.linear()
+            .domain([90, 0])
+            .range([0, radius]);
+
+        var line = d3.svg.line.radial()
+            .radius(function(d) {
+                return r(d[1]);
+            })
+            .angle(function(d) {
+                return -d[0] + Math.PI / 2;
+            });
+
+        var gr = null;
+
+        createSkyplot();
+
+        var json = {
+            "type": "GSV",
+            "inView": [{
+                    "data": [1, 45, 90]
+                },
+                {
+                    "data": [3, 70, 225]
+                }
+            ]
+        };
+
+        updateSkyPlot(json);
+
+        function createSkyplot() {
+            //////////////////////			  
+            gr = svg.append("g")
+                .attr("class", "r axis")
+                .selectAll("g")
+                .data(r.ticks(5))
+                .enter().append("g");
+
+            gr.append("circle").attr("r", r).style('fill', 'white');
+
+            gr.append("text")
+                .attr("y", function(d) {
+                    return -r(d) - 4;
+                })
+                .attr("transform", "rotate(20)")
+                .style("text-anchor", "middle")
+                .style('fill', 'blue')
+                .text(function(d) {
+                    return d;
+                });
+            /////////////////////
+
+            /////////////////////
+            var ga = svg.append("g")
+                .attr("class", "a axis")
+                .selectAll("g")
+                .data(d3.range(0, 360, 45))
+                .enter().append("g")
+                .attr("transform", function(d) {
+                    return "rotate(" + (d - 90) + ")";
+                });
+
+            ga.append("line").attr("x2", radius).style('stroke', 'black').style('stroke-dasharray', '1,8');
+
+            ga.append("text")
+                .attr("x", radius + 6)
+                .attr("dy", ".35em")
+                .style("text-anchor", function(d) {
+                    return d < 360 && d > 90 ? "end" : null;
+                })
+                .attr("transform", function(d) {
+                    return d < 360 && d > 90 ? "rotate(180 " + (radius + 3) + ",0)" : null;
+                })
+                .text(function(d) {
+                    return d + "°";
+                });
+            /////////////////////
+        }
+
+        function updateSkyPlot(d) {
+            var pos = [];
+            var inview = d.inView;
+
+            for (var elem in inview) {
+                if (inview.hasOwnProperty(elem)) {
+                    // the azimuth should be in radians and substracted from (Math.PI/2)
+                    var d = [(Math.PI / 2) - inview[elem].data[2] * deg2rad, inview[elem].data[1]];
+                    pos.push(d);
+                }
+            }
+
+            var r = d3.scale.linear()
+                .domain([90, 0])
+                .range([0, radius]);
+
+            var line = d3.svg.line.radial()
+                .radius(function(d) {
+                    return r(d[1]);
+                })
+                .angle(function(d) {
+                    return -d[0] + Math.PI / 2;
+                });
+
+            var color = d3.scale.category20();
+
+            svg.selectAll('circle').remove();
+
+            gr.append("circle").attr("r", r).style('fill', 'white');
+
+            svg.selectAll("point").data(pos).enter().append("circle").attr("class", "point")
+                .attr("transform", function(d) {
+                    var coors = line([d]).slice(1).slice(0, -1);
+                    return "translate(" + coors + ")"
+                })
+                .attr("r", 8)
+                .attr("fill", function(d, i) {
+                    return color(i);
+                });
+
+        }
+        $("#sidebarToggle").click(function() {
+            $(".span-icon").toggleClass("display-none");
+            $(".i-font").toggleClass("font-size");
+            $(this).toggleClass("mt");
+        })
+        $(window).bind("load", function() {
+            var x = window.outerWidth;
+            if (x <= 898) {
+                document.getElementById("demo").style.display = "none";
+                document.getElementById("box-3").style.display = "none";
+                document.getElementById("box-4").style.display = "none";
+            }
+            if (x > 773) {}
+            document.querySelector(".main").classList.remove("left-Class-8");
+        });
+        window.addEventListener("resize", () => {
+            var x = window.outerWidth;
+            if (x <= 898) {
+                document.getElementById("demo").style.display = "none";
+                document.getElementById("box-3").style.display = "none";
+                document.getElementById("box-4").style.display = "none";
+            }
+            if (x > 898) {
+                document.getElementById("demo").style.display = "block";
+                document.getElementById("box-3").style.display = "block";
+                document.getElementById("box-4").style.display = "block";
+            }
+        })
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.toUTCString();
+        new Morris.Line({
+            element: 'line',
+            data: [{
+                    x: '2013',
+                    a: 100,
+                    b: 90
+                },
+                {
+                    x: '2014',
+                    a: 75,
+                    b: 65
+                },
+                {
+                    x: '2015',
+                    a: 30,
+                    b: 40
+                },
+                {
+                    x: '2016',
+                    a: 75,
+                    b: 65
+                },
+                {
+                    x: '2017',
+                    a: 50,
+                    b: 40
+                },
+                {
+                    x: '2018',
+                    a: 75,
+                    b: 40
+                },
+                {
+                    x: '2019',
+                    a: 100,
+                    b: 90
+                }
+            ],
+            xkey: 'x',
+            ykeys: ['a', 'b'],
+            labels: ['Series A', 'Series B']
+        });
+    </script>
+
+</body></html>

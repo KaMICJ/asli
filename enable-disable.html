@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hiro Negar</title>
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/acme.css">
+    <link rel="stylesheet" href="css/hiro.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .sub:nth-child(1) {
+            background-color: red;
+
+        }
+
+        .sub:nth-child(1)>a {
+            color: black;
+        }
+        .main-parent {
+            width: 100%;
+            /*            height: 500px;*/
+            border-radius: 29px;
+            border: 5px solid black;
+            /*            background-color: white;*/
+        }
+
+        #line {
+            /*            float: left;*/
+            height: 150px;
+            background-color: white;
+            position: relative;
+            /*            top: 3%;*/
+        }
+
+        .main-parent>p {
+            color: black;
+            font-family: "acme";
+            text-align: center;
+        }
+
+        .table-activity {
+            color: black;
+            width: 100%;
+            font-family: Fredoka One;
+        }
+
+        .satel,
+        .en {
+            background-color: rgba(0, 0, 0, 0.81);
+            color: white !important;
+        }
+
+        .en:hover {
+            color: black !important;
+        }
+
+        .mt {
+            margin-top: 50px;
+        }
+
+        td {
+            border: 1px solid black;
+            padding-left: 10px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            background-color: white
+        }
+
+        .in-ou>p {
+            color: black;
+            font-family: "acme";
+            text-align: center;
+        }
+
+        .filter-cadr>i {
+            margin-left: 7px;
+        }
+
+        .display-none {
+            display: none !important;
+        }
+
+        .font-size {
+            font-size: 25px !important;
+        }
+
+        .menu-1 {
+            position: fixed !important;
+            z-index: 700;
+        }
+
+        .tabContent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .tabContents {
+            margin-top: 20px;
+        }
+
+        .text-sub>li {
+            color: black;
+            cursor: auto;
+        }
+
+        .sub {
+            color: black !important;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: rgba(0, 0, 0, 0.81);
+            font-family: "acme";
+            border: 2px solid black;
+        }
+
+        .sub>a {
+            color: white;
+        }
+
+        tr>th>a {
+            color: black !important;
+        }
+
+        tr>th {
+            color: black;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        table {
+            margin-bottom: 20px;
+        }
+
+        .tabContent> {
+            text-align: center;
+            color: black;
+
+        }
+
+        #chart {
+            z-index: 900;
+        }
+        .mb{
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+
+    <!-- Custom fonts for this template-->
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="menu bg-gray-900 navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="bang sidebar-brand-icon">
+                    <div class="bang">
+                        <img src="image/WhatsApp_Image_2019-09-01_at_16-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <!--        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>-->
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt icon-stats-bars2"></i>
+                    <span class="span-icon">Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Heading -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <!--
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog icon-podcast"></i>
+                    <span class="span-icon">Receiver Status</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+-->
+            <!--
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Receiver Status:</h6>
+                        <a class="collapse-item" href="activity.html">Activity</a>
+                        <a class="collapse-item" href="position.html">Position</a>
+                        <a class="collapse-item" href="graphs.html">Graphs</a>
+                        <a class="collapse-item" href="vector.html">Vector</a>
+                        <a class="collapse-item" href="identity.html">Identity</a>
+                        <a class="collapse-item" href="receiver.html">Receiver</a>
+                    </div>
+-->
+            <!--
+                </div>
+            </li>
+-->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!--
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench icon-feed"></i>
+                    <span class="span-icon">Satellites</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+-->
+            <!--
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Satellites:</h6>
+                        <a class="collapse-item" href="general.html">General</a>
+                        <a class="collapse-item" href="tracking.html">Tracking</a>
+                        <a class="collapse-item" href="enable-disable.html">Enable/Disable</a>
+                    </div>
+-->
+            <!--
+                </div>
+            </li>
+-->
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Heading -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+
+            <!-- Nav Item - Charts -->
+            <!--
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder icon-cogs"></i>
+                    <span class="span-icon">Receiver Configuration</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+-->
+            <!--
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Res Config:</h6>
+                        <a class="collapse-item" href="summer.html">Summar</a>
+                        <a class="collapse-item" href="attena.html">Attena</a>
+                        <a class="collapse-item" href="reference.html">Reference Station</a>
+                        <a class="collapse-item" href="receiver-tracking.html">Tracking</a>
+                        <a class="collapse-item" href="correction.html">Correction Controls</a>
+                        <a class="collapse-item" href="receiver-position.html">Position</a>
+                        <a class="collapse-item" href="rest.html">Rest</a>
+                    </div>
+-->
+            <!--
+                </div>
+            </li>
+-->
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="master.html">
+                    <i class="fas fa-fw icon-tree"></i>
+                    <span class="span-icon">Network Configuration</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw icon-loop"></i>
+                    <span class="span-icon">I/O Configuration</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw icon-lock"></i>
+                    <span class="span-icon">Security</span></a>
+            </li>
+            <!--            <hr class="sidebar-divider">-->
+            <!-- Nav Item - Tables -->
+
+            <!-- Divider -->
+            <!--        <hr class="sidebar-divider d-none d-md-block">-->
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <!--
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+-->
+
+        </ul>
+        <!-- End of Sidebar -->
+        <ul class="menu-1 menu bg-gray-900 navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="bang sidebar-brand-icon">
+                    <div class="bang">
+                        <img src="image/WhatsApp_Image_2019-09-01_at_16-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <!--        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>-->
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="i-font fas fa-fw fa-tachometer-alt icon-stats-bars2"></i>
+                    <span class="span-icon">Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Heading -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="rec nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="i-font fas fa-fw fa-cog icon-podcast"></i>
+                    <span class="span-icon">Receiver Status</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Receiver Status:</h6>
+                        <a class="collapse-item ac" href="activity.html">Activity</a>
+                        <a class="collapse-item" href="position.html">Position</a>
+                        <a class="collapse-item" href="graphs.html">Graphs</a>
+                        <a class="collapse-item" href="vector.html">Vector</a>
+                        <a class="collapse-item" href="identity.html">Identity</a>
+                        <!--                        <a class="collapse-item" href="receiver.html">Receiver</a>-->
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="satel nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="i-font fas fa-fw fa-wrench icon-feed"></i>
+                    <span class="span-icon">Satellites</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Satellites:</h6>
+                        <a class="collapse-item" href="general.html">General</a>
+                        <a class="collapse-item track" href="tracking.html">Tracking</a>
+                        <a class="collapse-item en" href="enable-disable.html">Enable/Disable</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Heading -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                    <i class="i-font fas fa-fw fa-folder icon-cogs"></i>
+                    <span class="span-icon">Receiver Configuration</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Res Config:</h6>
+                        <a class="collapse-item" href="summer.html">Summar</a>
+                        <a class="collapse-item" href="attena.html">Attena</a>
+                        <a class="collapse-item" href="reference.html">Reference Station</a>
+                        <a class="collapse-item" href="receiver-tracking.html">Tracking</a>
+                        <a class="collapse-item" href="correction.html">Correction Controls</a>
+                        <a class="collapse-item" href="receiver-position.html">Position</a>
+                        <a class="collapse-item" href="rest.html">Rest</a>
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="network.html">
+                    <i class="i-font fas fa-fw icon-tree"></i>
+                    <span class="span-icon">Network Configuration</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="i-o.html">
+                    <i class="i-font fas fa-fw icon-loop"></i>
+                    <span class="span-icon">I/O Configuration</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="security.html">
+                    <i class="i-font fas fa-fw icon-lock"></i>
+                    <span class="span-icon">Security</span></a>
+            </li>
+            <!--            <hr class="sidebar-divider">-->
+            <!-- Nav Item - Tables -->
+
+            <!-- Divider -->
+            <!--        <hr class="sidebar-divider d-none d-md-block">-->
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content" class="bg-gray-800">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-gray-900 topbar mb-4 static-top shadow">
+                    <div class="filter-cadr col-md-3 no-arrow">
+                        <span class="icon-filter">
+                        </span>
+                        <i class="text-gray-200">Filters</i>
+                        <span class="ctrl icon-ctrl"></span>
+                    </div>
+                    <div class="dashboard col-md-5">
+                        <p class="text-gray-200">Dashboard</p>
+                    </div>
+                    <div class="time col-md-4">
+                        <div id="demo" class="col-md-7 text-gray-200">
+                        </div>
+                        <div class="user-panel col-md-5">
+                            <span class="user icon-user col-md-12 text-gray-200"></span>
+                        </div>
+                    </div>
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <div class="input-group-append">
+                            </div>
+                        </div>
+                    </form>
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row mb-3">
+                        <div class="main-parent container bg-gray-600 col-xl-12">
+                            <p class="form-text h2">Enable-Disable</p>
+                            <div class="container">
+                                <ul class="nav nav-tabs col-12">
+                                    <li class="sub active col-md-2" onclick="Tabs(event, 'GPS')">
+                                        <a href="javascript:void(0)">GPS</a>
+                                    </li>
+                                    <li class="sub col-md-2" onclick="Tabs(event, 'GLONASS')">
+                                        <a href="javascript:void(0)">GLONASS</a>
+                                    </li>
+                                    <li class="sub col-md-2" onclick="Tabs(event, 'Galileo')">
+                                        <a href="javascript:void(0)">Galileo</a>
+                                    </li>
+                                    <li class="sub col-md-2" onclick="Tabs(event, 'BeiDou')">
+                                        <a href="javascript:void(0)">BeiDou</a>
+                                    </li>
+                                    <li class="sub col-md-2" onclick="Tabs(event, 'QZSS')">
+                                        <a href="javascript:void(0)">QZSS</a>
+                                    </li>
+                                    <li class="sub col-md-2" onclick="Tabs(event, 'SBAS')">
+                                        <a href="javascript:void(0)">SBAS</a>
+                                    </li>
+                                </ul>
+                                <div id="GPS" class="tabContent" style="display:block">
+                                    <table id="mainTable" class="col-md-12" cellspacing="0" cellpadding="3" border="0" style="border-collapse:collapse" width="482px">
+                                        <tbody>
+                                            <tr class="tr gen">
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen" style="border-right-width:thick">Ignore<br>Health</th>
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen" style="border-right-width:thick">Ignore<br>Health</th>
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen">Ignore<br>Health</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">1</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable1" onclick="enClick(1)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore1" onclick="igClick(1)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">12</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable12" onclick="enClick(12)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore12" onclick="igClick(12)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">23</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable23" onclick="enClick(23)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore23" onclick="igClick(23)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">2</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable2" onclick="enClick(2)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore2" onclick="igClick(2)" disabled="disabled"></td>
+                                                <td class="gen_cent even">13</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable13" onclick="enClick(13)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore13" onclick="igClick(13)" disabled="disabled"></td>
+                                                <td class="gen_cent even">24</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable24" onclick="enClick(24)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore24" onclick="igClick(24)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">3</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable3" onclick="enClick(3)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore3" onclick="igClick(3)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">14</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable14" onclick="enClick(14)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore14" onclick="igClick(14)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">25</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable25" onclick="enClick(25)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore25" onclick="igClick(25)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">4</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable4" onclick="enClick(4)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore4" onclick="igClick(4)" disabled="disabled"></td>
+                                                <td class="gen_cent even">15</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable15" onclick="enClick(15)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore15" onclick="igClick(15)" disabled="disabled"></td>
+                                                <td class="gen_cent even">26</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable26" onclick="enClick(26)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore26" onclick="igClick(26)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">5</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable5" onclick="enClick(5)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore5" onclick="igClick(5)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">16</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable16" onclick="enClick(16)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore16" onclick="igClick(16)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">27</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable27" onclick="enClick(27)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore27" onclick="igClick(27)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">6</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable6" onclick="enClick(6)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore6" onclick="igClick(6)" disabled="disabled"></td>
+                                                <td class="gen_cent even">17</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable17" onclick="enClick(17)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore17" onclick="igClick(17)" disabled="disabled"></td>
+                                                <td class="gen_cent even">28</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable28" onclick="enClick(28)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore28" onclick="igClick(28)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">7</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable7" onclick="enClick(7)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore7" onclick="igClick(7)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">18</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable18" onclick="enClick(18)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore18" onclick="igClick(18)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">29</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable29" onclick="enClick(29)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore29" onclick="igClick(29)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">8</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable8" onclick="enClick(8)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore8" onclick="igClick(8)" disabled="disabled"></td>
+                                                <td class="gen_cent even">19</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable19" onclick="enClick(19)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore19" onclick="igClick(19)" disabled="disabled"></td>
+                                                <td class="gen_cent even">30</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable30" onclick="enClick(30)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore30" onclick="igClick(30)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">9</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable9" onclick="enClick(9)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore9" onclick="igClick(9)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">20</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable20" onclick="enClick(20)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore20" onclick="igClick(20)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">31</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable31" onclick="enClick(31)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore31" onclick="igClick(31)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">10</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable10" onclick="enClick(10)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore10" onclick="igClick(10)" disabled="disabled"></td>
+                                                <td class="gen_cent even">21</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable21" onclick="enClick(21)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore21" onclick="igClick(21)" disabled="disabled"></td>
+                                                <td class="gen_cent even">32</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable32" onclick="enClick(32)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore32" onclick="igClick(32)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">11</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable11" onclick="enClick(11)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore11" onclick="igClick(11)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">22</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable22" onclick="enClick(22)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore22" onclick="igClick(22)" disabled="disabled"></td>
+                                                <td colspan="3">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="GLONASS" class="tabContent">
+                                    <table id="mainTable" cellspacing="0" cellpadding="3" class="col-md-12" border="0" style="border-collapse:collapse" width="482px">
+                                        <tbody>
+                                            <tr class="gen">
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen" style="border-right-width:thick">Ignore<br>Health</th>
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen" style="border-right-width:thick">Ignore<br>Health</th>
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen">Ignore<br>Health</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">1</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable1" onclick="enClick(1)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore1" onclick="igClick(1)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">9</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable9" onclick="enClick(9)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore9" onclick="igClick(9)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">17</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable17" onclick="enClick(17)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore17" onclick="igClick(17)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">2</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable2" onclick="enClick(2)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore2" onclick="igClick(2)" disabled="disabled"></td>
+                                                <td class="gen_cent even">10</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable10" onclick="enClick(10)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore10" onclick="igClick(10)" disabled="disabled"></td>
+                                                <td class="gen_cent even">18</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable18" onclick="enClick(18)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore18" onclick="igClick(18)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">3</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable3" onclick="enClick(3)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore3" onclick="igClick(3)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">11</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable11" onclick="enClick(11)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore11" onclick="igClick(11)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">19</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable19" onclick="enClick(19)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore19" onclick="igClick(19)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">4</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable4" onclick="enClick(4)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore4" onclick="igClick(4)" disabled="disabled"></td>
+                                                <td class="gen_cent even">12</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable12" onclick="enClick(12)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore12" onclick="igClick(12)" disabled="disabled"></td>
+                                                <td class="gen_cent even">20</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable20" onclick="enClick(20)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore20" onclick="igClick(20)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">5</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable5" onclick="enClick(5)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore5" onclick="igClick(5)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">13</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable13" onclick="enClick(13)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore13" onclick="igClick(13)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">21</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable21" onclick="enClick(21)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore21" onclick="igClick(21)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">6</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable6" onclick="enClick(6)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore6" onclick="igClick(6)" disabled="disabled"></td>
+                                                <td class="gen_cent even">14</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable14" onclick="enClick(14)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore14" onclick="igClick(14)" disabled="disabled"></td>
+                                                <td class="gen_cent even">22</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable22" onclick="enClick(22)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore22" onclick="igClick(22)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">7</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable7" onclick="enClick(7)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore7" onclick="igClick(7)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">15</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable15" onclick="enClick(15)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore15" onclick="igClick(15)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">23</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable23" onclick="enClick(23)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore23" onclick="igClick(23)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">8</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable8" onclick="enClick(8)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore8" onclick="igClick(8)" disabled="disabled"></td>
+                                                <td class="gen_cent even">16</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable16" onclick="enClick(16)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore16" onclick="igClick(16)" disabled="disabled"></td>
+                                                <td class="gen_cent even">24</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable24" onclick="enClick(24)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore24" onclick="igClick(24)" disabled="disabled"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="Galileo" class=" tabContent">
+                                    <table id="mainTable" cellspacing="0" cellpadding="3" class="col-md-12" border="0" style="border-collapse:collapse" width="482px">
+                                        <tbody>
+                                            <tr class="gen">
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen" style="border-right-width:thick">Ignore<br>Health</th>
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen" style="border-right-width:thick">Ignore<br>Health</th>
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen">Ignore<br>Health</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">1</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable1" onclick="enClick(1)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore1" onclick="igClick(1)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">13</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable13" onclick="enClick(13)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore13" onclick="igClick(13)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">25</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable25" onclick="enClick(25)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore25" onclick="igClick(25)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">2</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable2" onclick="enClick(2)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore2" onclick="igClick(2)" disabled="disabled"></td>
+                                                <td class="gen_cent even">14</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable14" onclick="enClick(14)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore14" onclick="igClick(14)" disabled="disabled"></td>
+                                                <td class="gen_cent even">26</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable26" onclick="enClick(26)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore26" onclick="igClick(26)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">3</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable3" onclick="enClick(3)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore3" onclick="igClick(3)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">15</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable15" onclick="enClick(15)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore15" onclick="igClick(15)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">27</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable27" onclick="enClick(27)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore27" onclick="igClick(27)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">4</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable4" onclick="enClick(4)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore4" onclick="igClick(4)" disabled="disabled"></td>
+                                                <td class="gen_cent even">16</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable16" onclick="enClick(16)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore16" onclick="igClick(16)" disabled="disabled"></td>
+                                                <td class="gen_cent even">28</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable28" onclick="enClick(28)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore28" onclick="igClick(28)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">5</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable5" onclick="enClick(5)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore5" onclick="igClick(5)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">17</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable17" onclick="enClick(17)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore17" onclick="igClick(17)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">29</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable29" onclick="enClick(29)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore29" onclick="igClick(29)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">6</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable6" onclick="enClick(6)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore6" onclick="igClick(6)" disabled="disabled"></td>
+                                                <td class="gen_cent even">18</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable18" onclick="enClick(18)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore18" onclick="igClick(18)" disabled="disabled"></td>
+                                                <td class="gen_cent even">30</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable30" onclick="enClick(30)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore30" onclick="igClick(30)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">7</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable7" onclick="enClick(7)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore7" onclick="igClick(7)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">19</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable19" onclick="enClick(19)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore19" onclick="igClick(19)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">31</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable31" onclick="enClick(31)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore31" onclick="igClick(31)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">8</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable8" onclick="enClick(8)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore8" onclick="igClick(8)" disabled="disabled"></td>
+                                                <td class="gen_cent even">20</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable20" onclick="enClick(20)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore20" onclick="igClick(20)" disabled="disabled"></td>
+                                                <td class="gen_cent even">32</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable32" onclick="enClick(32)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore32" onclick="igClick(32)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">9</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable9" onclick="enClick(9)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore9" onclick="igClick(9)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">21</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable21" onclick="enClick(21)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore21" onclick="igClick(21)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">33</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable33" onclick="enClick(33)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore33" onclick="igClick(33)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">10</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable10" onclick="enClick(10)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore10" onclick="igClick(10)" disabled="disabled"></td>
+                                                <td class="gen_cent even">22</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable22" onclick="enClick(22)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore22" onclick="igClick(22)" disabled="disabled"></td>
+                                                <td class="gen_cent even">34</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable34" onclick="enClick(34)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore34" onclick="igClick(34)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">11</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable11" onclick="enClick(11)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore11" onclick="igClick(11)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">23</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable23" onclick="enClick(23)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore23" onclick="igClick(23)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">35</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable35" onclick="enClick(35)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore35" onclick="igClick(35)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">12</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable12" onclick="enClick(12)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore12" onclick="igClick(12)" disabled="disabled"></td>
+                                                <td class="gen_cent even">24</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable24" onclick="enClick(24)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore24" onclick="igClick(24)" disabled="disabled"></td>
+                                                <td class="gen_cent even">36</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable36" onclick="enClick(36)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore36" onclick="igClick(36)" disabled="disabled"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="BeiDou" class=" tabContent">
+                                    <table id="mainTable" cellspacing="0" cellpadding="3" class="col-md-12" border="0" style="border-collapse:collapse" width="482px">
+                                        <tbody>
+                                            <tr class="gen">
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen" style="border-right-width:thick">Ignore<br>Health</th>
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen" style="border-right-width:thick">Ignore<br>Health</th>
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen">Ignore<br>Health</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">1</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable1" onclick="enClick(1)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore1" onclick="igClick(1)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">11</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable11" onclick="enClick(11)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore11" onclick="igClick(11)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">21</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable21" onclick="enClick(21)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore21" onclick="igClick(21)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">2</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable2" onclick="enClick(2)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore2" onclick="igClick(2)" disabled="disabled"></td>
+                                                <td class="gen_cent even">12</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable12" onclick="enClick(12)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore12" onclick="igClick(12)" disabled="disabled"></td>
+                                                <td class="gen_cent even">22</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable22" onclick="enClick(22)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore22" onclick="igClick(22)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">3</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable3" onclick="enClick(3)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore3" onclick="igClick(3)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">13</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable13" onclick="enClick(13)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore13" onclick="igClick(13)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">23</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable23" onclick="enClick(23)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore23" onclick="igClick(23)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">4</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable4" onclick="enClick(4)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore4" onclick="igClick(4)" disabled="disabled"></td>
+                                                <td class="gen_cent even">14</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable14" onclick="enClick(14)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore14" onclick="igClick(14)" disabled="disabled"></td>
+                                                <td class="gen_cent even">24</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable24" onclick="enClick(24)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore24" onclick="igClick(24)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">5</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable5" onclick="enClick(5)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore5" onclick="igClick(5)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">15</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable15" onclick="enClick(15)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore15" onclick="igClick(15)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">25</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable25" onclick="enClick(25)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore25" onclick="igClick(25)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">6</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable6" onclick="enClick(6)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore6" onclick="igClick(6)" disabled="disabled"></td>
+                                                <td class="gen_cent even">16</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable16" onclick="enClick(16)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore16" onclick="igClick(16)" disabled="disabled"></td>
+                                                <td class="gen_cent even">26</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable26" onclick="enClick(26)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore26" onclick="igClick(26)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">7</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable7" onclick="enClick(7)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore7" onclick="igClick(7)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">17</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable17" onclick="enClick(17)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore17" onclick="igClick(17)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">27</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable27" onclick="enClick(27)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore27" onclick="igClick(27)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">8</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable8" onclick="enClick(8)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore8" onclick="igClick(8)" disabled="disabled"></td>
+                                                <td class="gen_cent even">18</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable18" onclick="enClick(18)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore18" onclick="igClick(18)" disabled="disabled"></td>
+                                                <td class="gen_cent even">28</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable28" onclick="enClick(28)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore28" onclick="igClick(28)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">9</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable9" onclick="enClick(9)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore9" onclick="igClick(9)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">19</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable19" onclick="enClick(19)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore19" onclick="igClick(19)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">29</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable29" onclick="enClick(29)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore29" onclick="igClick(29)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">10</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable10" onclick="enClick(10)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore10" onclick="igClick(10)" disabled="disabled"></td>
+                                                <td class="gen_cent even">20</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable20" onclick="enClick(20)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore20" onclick="igClick(20)" disabled="disabled"></td>
+                                                <td class="gen_cent even">30</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable30" onclick="enClick(30)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore30" onclick="igClick(30)" disabled="disabled"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="QZSS" class=" tabContent">
+                                    <table id="mainTable" cellspacing="0" cellpadding="3" border="0" style="border-collapse:collapse" width="482px">
+                                        <tbody>
+                                            <tr class="gen">
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen" style="border-right-width:thick">Ignore<br>Health</th>
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen" style="border-right-width:thick">Ignore<br>Health</th>
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Enable</th>
+                                                <th class="gen">Ignore<br>Health</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">193</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable193" onclick="enClick(193)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore193" onclick="igClick(193)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">197</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable197" onclick="enClick(197)" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore197" onclick="igClick(197)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">201</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable201" onclick="enClick(201)" disabled="disabled"></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Ignore201" onclick="igClick(201)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">194</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable194" onclick="enClick(194)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore194" onclick="igClick(194)" disabled="disabled"></td>
+                                                <td class="gen_cent even">198</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable198" onclick="enClick(198)" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore198" onclick="igClick(198)" disabled="disabled"></td>
+                                                <td class="gen_cent even">202</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable202" onclick="enClick(202)" disabled="disabled"></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Ignore202" onclick="igClick(202)" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">195</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable195" onclick="enClick(195)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore195" onclick="igClick(195)" disabled="disabled"></td>
+                                                <td class="gen_cent odd">199</td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="Enable199" onclick="enClick(199)" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="Ignore199" onclick="igClick(199)" disabled="disabled"></td>
+                                                <td colspan="3">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">196</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable196" onclick="enClick(196)" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore196" onclick="igClick(196)" disabled="disabled"></td>
+                                                <td class="gen_cent even">200</td>
+                                                <td class="gen_cent even"><input type="checkbox" name="Enable200" onclick="enClick(200)" disabled="disabled"></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="Ignore200" onclick="igClick(200)" disabled="disabled"></td>
+                                                <td colspan="3">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="SBAS" class=" tabContent">
+                                    <table id="mainTable" cellspacing="0" cellpadding="3" class="col-md-12" border="0" style="border-collapse:collapse">
+                                        <tbody>
+                                            <tr class="gen">
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Satellite</th>
+                                                <th class="gen">Setting</th>
+                                                <th class="gen">Use Obs.</th>
+                                                <th class="gen">SV</th>
+                                                <th class="gen">Satellite</th>
+                                                <th class="gen">Setting</th>
+                                                <th class="gen">Use Obs.</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">120</td>
+                                                <td class="gen_cent odd">EGNOS - AOR-E</td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS120" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(119, 255, 255);">
+                                                        <option value="0" style="background-color:#FF7777">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF" selected="1">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="InPos120" disabled="disabled"></td>
+                                                <td class="gen_cent odd">140</td>
+                                                <td class="gen_cent odd">SDCM - LUCH-5A</td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS140" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="InPos140" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">121</td>
+                                                <td class="gen_cent even"></td>
+                                                <td class="gen_cent even"><select name="EnableSBAS121" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="InPos121" disabled="disabled"></td>
+                                                <td class="gen_cent even">141</td>
+                                                <td class="gen_cent even">SDCM - LUCH-5V</td>
+                                                <td class="gen_cent even"><select name="EnableSBAS141" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="InPos141" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">122</td>
+                                                <td class="gen_cent odd">AUS/NZ - INMARSAT 4-F1</td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS122" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(119, 255, 255);">
+                                                        <option value="0" style="background-color:#FF7777">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF" selected="1">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="InPos122" disabled="disabled"></td>
+                                                <td class="gen_cent odd">142</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS142" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="InPos142" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">123</td>
+                                                <td class="gen_cent even">EGNOS - ASTRA-5B</td>
+                                                <td class="gen_cent even"><select name="EnableSBAS123" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(119, 255, 255);">
+                                                        <option value="0" style="background-color:#FF7777">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF" selected="1">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="InPos123" disabled="disabled"></td>
+                                                <td class="gen_cent even">143</td>
+                                                <td class="gen_cent even"></td>
+                                                <td class="gen_cent even"><select name="EnableSBAS143" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="InPos143" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">124</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS124" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="InPos124" disabled="disabled"></td>
+                                                <td class="gen_cent odd">144</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS144" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="InPos144" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">125</td>
+                                                <td class="gen_cent even">SDCM - LUCH-5B</td>
+                                                <td class="gen_cent even"><select name="EnableSBAS125" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="InPos125" disabled="disabled"></td>
+                                                <td class="gen_cent even">145</td>
+                                                <td class="gen_cent even"></td>
+                                                <td class="gen_cent even"><select name="EnableSBAS145" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="InPos145" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">126</td>
+                                                <td class="gen_cent odd">EGNOS - EMEA</td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS126" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="InPos126" disabled="disabled"></td>
+                                                <td class="gen_cent odd">146</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS146" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="InPos146" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">127</td>
+                                                <td class="gen_cent even">GAGAN - GSAT 8</td>
+                                                <td class="gen_cent even"><select name="EnableSBAS127" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(119, 255, 255);">
+                                                        <option value="0" style="background-color:#FF7777">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF" selected="1">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="InPos127" disabled="disabled"></td>
+                                                <td class="gen_cent even">147</td>
+                                                <td class="gen_cent even"></td>
+                                                <td class="gen_cent even"><select name="EnableSBAS147" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="InPos147" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">128</td>
+                                                <td class="gen_cent odd">GAGAN - GSAT 10</td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS128" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(119, 255, 255);">
+                                                        <option value="0" style="background-color:#FF7777">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF" selected="1">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="InPos128" disabled="disabled"></td>
+                                                <td class="gen_cent odd">148</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS148" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="InPos148" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">129</td>
+                                                <td class="gen_cent even">MSAS-1</td>
+                                                <td class="gen_cent even"><select name="EnableSBAS129" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(119, 255, 255);">
+                                                        <option value="0" style="background-color:#FF7777">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF" selected="1">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="InPos129" disabled="disabled"></td>
+                                                <td class="gen_cent even">149</td>
+                                                <td class="gen_cent even"></td>
+                                                <td class="gen_cent even"><select name="EnableSBAS149" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="InPos149" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">130</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS130" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="InPos130" disabled="disabled"></td>
+                                                <td class="gen_cent odd">150</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS150" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="InPos150" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">131</td>
+                                                <td class="gen_cent even">WAAS - EUTELSAT 117W B</td>
+                                                <td class="gen_cent even"><select name="EnableSBAS131" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(119, 255, 255);">
+                                                        <option value="0" style="background-color:#FF7777">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF" selected="1">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="InPos131" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even">151</td>
+                                                <td class="gen_cent even"></td>
+                                                <td class="gen_cent even"><select name="EnableSBAS151" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="InPos151" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">132</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS132" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="InPos132" disabled="disabled"></td>
+                                                <td class="gen_cent odd">152</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS152" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="InPos152" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">133</td>
+                                                <td class="gen_cent even">WAAS - SES-15</td>
+                                                <td class="gen_cent even"><select name="EnableSBAS133" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="InPos133" disabled="disabled"></td>
+                                                <td class="gen_cent even">153</td>
+                                                <td class="gen_cent even"></td>
+                                                <td class="gen_cent even"><select name="EnableSBAS153" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="InPos153" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">134</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS134" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="InPos134" disabled="disabled"></td>
+                                                <td class="gen_cent odd">154</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS154" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="InPos154" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">135</td>
+                                                <td class="gen_cent even">WAAS - GALAXY XV</td>
+                                                <td class="gen_cent even"><select name="EnableSBAS135" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(119, 255, 255);">
+                                                        <option value="0" style="background-color:#FF7777">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF" selected="1">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="InPos135" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent even">155</td>
+                                                <td class="gen_cent even"></td>
+                                                <td class="gen_cent even"><select name="EnableSBAS155" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="InPos155" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">136</td>
+                                                <td class="gen_cent odd">EGNOS - SES-5</td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS136" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="InPos136" disabled="disabled"></td>
+                                                <td class="gen_cent odd">156</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS156" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="InPos156" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">137</td>
+                                                <td class="gen_cent even">MSAS-2</td>
+                                                <td class="gen_cent even"><select name="EnableSBAS137" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(119, 255, 255);">
+                                                        <option value="0" style="background-color:#FF7777">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF" selected="1">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="InPos137" disabled="disabled"></td>
+                                                <td class="gen_cent even">157</td>
+                                                <td class="gen_cent even"></td>
+                                                <td class="gen_cent even"><select name="EnableSBAS157" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even"><input type="checkbox" name="InPos157" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent odd">138</td>
+                                                <td class="gen_cent odd">WAAS - ANIK F1R</td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS138" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(119, 255, 255);">
+                                                        <option value="0" style="background-color:#FF7777">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF" selected="1">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd" style="border-right-width:thick"><input type="checkbox" name="InPos138" checked="on" disabled="disabled"></td>
+                                                <td class="gen_cent odd">158</td>
+                                                <td class="gen_cent odd"></td>
+                                                <td class="gen_cent odd"><select name="EnableSBAS158" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent odd"><input type="checkbox" name="InPos158" disabled="disabled"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="gen_cent even">139</td>
+                                                <td class="gen_cent even">GAGAN - GSAT 15</td>
+                                                <td class="gen_cent even"><select name="EnableSBAS139" onchange="updateSbasColor(this) ;" disabled="disabled" style="background-color: rgb(255, 119, 119);">
+                                                        <option value="0" style="background-color:#FF7777" selected="1">Off</option>
+                                                        <option value="1" style="background-color:#77FF77">Enable</option>
+                                                        <option value="2" style="background-color:#FFFF77">Ignore Health</option>
+                                                        <option value="3" style="background-color:#77FFFF">Auto Enable</option>
+                                                    </select></td>
+                                                <td class="gen_cent even" style="border-right-width:thick"><input type="checkbox" name="InPos139" disabled="disabled"></td>
+                                                <td colspan="4"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <br>
+                            <input type="button" class="btn btn-danger" name="EnableAll" id="EnableAll" value="Enable All" onclick="EnableAllAction()" disabled="disabled">
+                            <input type="button" class="btn btn-light" name="IgnoreHealthAll" id="IgnoreHealthAll" value="Ignore Health All" onclick="IgnoreHealthAllAction()" disabled="disabled">
+                            <input type="button" class="btn btn-facebook" name="DisableAll" id="DisableAll" value="Disable All" onclick="DisableAllAction()" disabled="disabled">
+                            <br>
+                            <br>
+                            <input type="button" class="mb btn btn-dark" name="OK" id="OK" value="OK" onclick="OkayAction()" disabled="disabled">
+                            <input type="button" class="mb btn btn-light" name="cancel" id="cancel" value="Cancel" onclick="CancelAction()">
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; Hiro Negar</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/morris/morris.min.js"></script>
+    <script src="js/raphael/raphael.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(".sub").click(function() {
+            $(this).css("background-color", "red");
+            $(this).children("a").css("color", "black");
+            $(this).siblings().css("background-color", "rgba(0, 0, 0, 0.81)");
+            $(this).siblings().children("a").css("color", "white");
+        })
+        var p = new Date();
+        document.getElementById("demo").innerHTML = p.toUTCString();
+        $("#sidebarToggle").click(function() {
+            $(".span-icon").toggleClass("display-none");
+            $(".i-font").toggleClass("font-size");
+            $(this).toggleClass("mt");
+        })
+        //        $(".sub").click(function(){
+        //            $(this).css("background-color" : "white" , "color" , "black");
+        //        })
+        $(window).bind("load", function() {
+            var x = window.outerWidth;
+            if (x <= 898) {
+                document.getElementById("demo").style.display = "none";
+                document.getElementById("box-3").style.display = "none";
+                document.getElementById("box-4").style.display = "none";
+            }
+            if (x > 773) {}
+            document.querySelector(".main").classList.remove("left-Class-8");
+        });
+        window.addEventListener("resize", () => {
+            var x = window.outerWidth;
+            if (x <= 898) {
+                document.getElementById("demo").style.display = "none";
+                //                document.getElementById("box-3").style.display = "none";
+                //                document.getElementById("box-4").style.display = "none";
+            }
+            if (x > 898) {
+                document.getElementById("demo").style.display = "block";
+                //                document.getElementById("box-3").style.display = "block";
+                //                document.getElementById("box-4").style.display = "block";
+            }
+        })
+        //                document.getElementById("time").innerHTML = d.toUTCString();
+        function Tabs(evt, title) {
+
+            var tabcontent = document.getElementsByClassName("tabContent");
+
+            //for hide last content that clicked
+
+            for (var i = 0; i < tabcontent.length; i++) {
+
+                tabcontent[i].style.display = "none";
+
+            }
+
+            var tabtitile = document.getElementsByClassName("tabTitle");
+
+            //for inactive all tabs
+
+            for (var i = 0; i < tabtitile.length; i++) {
+
+                tabtitile[i].className = tabtitile[i].className.replace("active", "");
+
+            }
+
+            //show tabContetnt that has id equals title parameter
+
+            document.getElementById(title).style.display = "block"
+
+            //active clicked tab
+
+            //            evt.currentTarget.className += "active";
+
+        }
+
+
+        function Tab(evt, title) {
+
+            var tabcontent = document.getElementsByClassName("tabContents");
+
+            //for hide last content that clicked
+
+            for (var i = 0; i < tabcontent.length; i++) {
+
+                tabcontent[i].style.display = "none";
+
+            }
+
+            var tabtitile = document.getElementsByClassName("tabTitle");
+
+            //for inactive all tabs
+
+            for (var i = 0; i < tabtitile.length; i++) {
+
+                tabtitile[i].className = tabtitile[i].className.replace("active", "");
+
+            }
+
+            //show tabContetnt that has id equals title parameter
+
+            document.getElementById(title).style.display = "block"
+
+            //active clicked tab
+
+            //            evt.currentTarget.className += "active";
+
+        }
+        var deg2rad = Math.PI / 180;
+        var width = 400,
+            height = 350,
+            radius = Math.min(width, height) / 2 - 30;
+
+        var svg = d3.select("#chart").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        var r = d3.scale.linear()
+            .domain([90, 0])
+            .range([0, radius]);
+
+        var line = d3.svg.line.radial()
+            .radius(function(d) {
+                return r(d[1]);
+            })
+            .angle(function(d) {
+                return -d[0] + Math.PI / 2;
+            });
+
+        var gr = null;
+
+        createSkyplot();
+
+        var json = {
+            "type": "GSV",
+            "inView": [{
+                    "data": [1, 45, 90]
+                },
+                {
+                    "data": [3, 70, 225]
+                }
+            ]
+        };
+
+        updateSkyPlot(json);
+
+        function createSkyplot() {
+            //////////////////////			  
+            gr = svg.append("g")
+                .attr("class", "r axis")
+                .selectAll("g")
+                .data(r.ticks(5))
+                .enter().append("g");
+
+            gr.append("circle").attr("r", r).style('fill', 'white');
+
+            gr.append("text")
+                .attr("y", function(d) {
+                    return -r(d) - 4;
+                })
+                .attr("transform", "rotate(20)")
+                .style("text-anchor", "middle")
+                .style('fill', 'blue')
+                .text(function(d) {
+                    return d;
+                });
+            /////////////////////
+
+            /////////////////////
+            var ga = svg.append("g")
+                .attr("class", "a axis")
+                .selectAll("g")
+                .data(d3.range(0, 360, 45))
+                .enter().append("g")
+                .attr("transform", function(d) {
+                    return "rotate(" + (d - 90) + ")";
+                });
+
+            ga.append("line").attr("x2", radius).style('stroke', 'black').style('stroke-dasharray', '1,8');
+
+            ga.append("text")
+                .attr("x", radius + 6)
+                .attr("dy", ".35em")
+                .style("text-anchor", function(d) {
+                    return d < 360 && d > 90 ? "end" : null;
+                })
+                .attr("transform", function(d) {
+                    return d < 360 && d > 90 ? "rotate(180 " + (radius + 3) + ",0)" : null;
+                })
+                .text(function(d) {
+                    return d + "°";
+                });
+            /////////////////////
+        }
+
+        function updateSkyPlot(d) {
+            var pos = [];
+            var inview = d.inView;
+
+            for (var elem in inview) {
+                if (inview.hasOwnProperty(elem)) {
+                    // the azimuth should be in radians and substracted from (Math.PI/2)
+                    var d = [(Math.PI / 2) - inview[elem].data[2] * deg2rad, inview[elem].data[1]];
+                    pos.push(d);
+                }
+            }
+
+            var r = d3.scale.linear()
+                .domain([90, 0])
+                .range([0, radius]);
+
+            var line = d3.svg.line.radial()
+                .radius(function(d) {
+                    return r(d[1]);
+                })
+                .angle(function(d) {
+                    return -d[0] + Math.PI / 2;
+                });
+
+            var color = d3.scale.category20();
+
+            svg.selectAll('circle').remove();
+
+            gr.append("circle").attr("r", r).style('fill', 'white');
+
+            svg.selectAll("point").data(pos).enter().append("circle").attr("class", "point")
+                .attr("transform", function(d) {
+                    var coors = line([d]).slice(1).slice(0, -1);
+                    return "translate(" + coors + ")"
+                })
+                .attr("r", 8)
+                .attr("fill", function(d, i) {
+                    return color(i);
+                });
+
+        }
+    </script>
+
+</body></html>

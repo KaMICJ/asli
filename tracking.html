@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hiro Negar</title>
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/acme.css">
+    <link rel="stylesheet" href="css/hiro.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .main-parent {
+            width: 100%;
+            /*            height: 500px;*/
+            border-radius: 29px;
+            border: 5px solid black;
+            /*            background-color: white;*/
+        }
+
+        #line {
+            /*            float: left;*/
+            height: 150px;
+            background-color: white;
+            position: relative;
+            /*            top: 3%;*/
+        }
+
+        .main-parent>p {
+            color: black;
+            font-family: "acme";
+            text-align: center;
+        }
+
+        .table-activity {
+            color: black;
+            width: 100%;
+            font-family: Fredoka One;
+        }
+        .sub:nth-child(1) {
+            background-color: red;
+
+        }
+
+        .sub:nth-child(1)>a {
+            color: black;
+        }
+        .satel,
+        .track {
+            background-color: rgba(0, 0, 0, 0.81);
+            color: white !important;
+        }
+
+        .track:hover {
+            color: black !important;
+        }
+
+        .mt {
+            margin-top: 50px;
+        }
+
+        td {
+            border: 1px solid black;
+            padding-left: 10px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            background-color: white
+        }
+
+        .in-ou>p {
+            color: black;
+            font-family: "acme";
+            text-align: center;
+        }
+
+        .filter-cadr>i {
+            margin-left: 7px;
+        }
+
+        .display-none {
+            display: none !important;
+        }
+
+        .font-size {
+            font-size: 25px !important;
+        }
+
+        .menu-1 {
+            position: fixed !important;
+            z-index: 700;
+        }
+
+        .tabContent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .tabContents {
+            margin-top: 20px;
+        }
+
+        .text-sub>li {
+            color: black;
+            cursor: auto;
+        }
+
+        .sub {
+            color: black !important;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: rgba(0, 0, 0, 0.81);
+            font-family: "acme";
+            border: 2px solid black;
+        }
+
+        .sub>a {
+            color: white;
+        }
+
+        tr>th>a {
+            color: black !important;
+        }
+
+        table {
+            margin-bottom: 20px;
+        }
+
+        .tabContent> {
+            text-align: center;
+            color: black;
+
+        }
+        #chart {
+	z-index: 900;
+}
+    </style>
+
+    <!-- Custom fonts for this template-->
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="menu bg-gray-900 navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="bang sidebar-brand-icon">
+                    <div class="bang">
+                        <img src="image/WhatsApp_Image_2019-09-01_at_16-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <!--        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>-->
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt icon-stats-bars2"></i>
+                    <span class="span-icon">Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Heading -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <!--
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog icon-podcast"></i>
+                    <span class="span-icon">Receiver Status</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+-->
+            <!--
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Receiver Status:</h6>
+                        <a class="collapse-item" href="activity.html">Activity</a>
+                        <a class="collapse-item" href="position.html">Position</a>
+                        <a class="collapse-item" href="graphs.html">Graphs</a>
+                        <a class="collapse-item" href="vector.html">Vector</a>
+                        <a class="collapse-item" href="identity.html">Identity</a>
+                        <a class="collapse-item" href="receiver.html">Receiver</a>
+                    </div>
+-->
+            <!--
+                </div>
+            </li>
+-->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!--
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench icon-feed"></i>
+                    <span class="span-icon">Satellites</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+-->
+            <!--
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Satellites:</h6>
+                        <a class="collapse-item" href="general.html">General</a>
+                        <a class="collapse-item" href="tracking.html">Tracking</a>
+                        <a class="collapse-item" href="enable-disable.html">Enable/Disable</a>
+                    </div>
+-->
+            <!--
+                </div>
+            </li>
+-->
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Heading -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+
+            <!-- Nav Item - Charts -->
+            <!--
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder icon-cogs"></i>
+                    <span class="span-icon">Receiver Configuration</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+-->
+            <!--
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Res Config:</h6>
+                        <a class="collapse-item" href="summer.html">Summar</a>
+                        <a class="collapse-item" href="attena.html">Attena</a>
+                        <a class="collapse-item" href="reference.html">Reference Station</a>
+                        <a class="collapse-item" href="receiver-tracking.html">Tracking</a>
+                        <a class="collapse-item" href="correction.html">Correction Controls</a>
+                        <a class="collapse-item" href="receiver-position.html">Position</a>
+                        <a class="collapse-item" href="rest.html">Rest</a>
+                    </div>
+-->
+            <!--
+                </div>
+            </li>
+-->
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="master.html">
+                    <i class="fas fa-fw icon-tree"></i>
+                    <span class="span-icon">Network Configuration</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw icon-loop"></i>
+                    <span class="span-icon">I/O Configuration</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw icon-lock"></i>
+                    <span class="span-icon">Security</span></a>
+            </li>
+            <!--            <hr class="sidebar-divider">-->
+            <!-- Nav Item - Tables -->
+
+            <!-- Divider -->
+            <!--        <hr class="sidebar-divider d-none d-md-block">-->
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <!--
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+-->
+
+        </ul>
+        <!-- End of Sidebar -->
+        <ul class="menu-1 menu bg-gray-900 navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="bang sidebar-brand-icon">
+                    <div class="bang">
+                        <img src="image/WhatsApp_Image_2019-09-01_at_16-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <!--        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>-->
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="i-font fas fa-fw fa-tachometer-alt icon-stats-bars2"></i>
+                    <span class="span-icon">Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Heading -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="rec nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="i-font fas fa-fw fa-cog icon-podcast"></i>
+                    <span class="span-icon">Receiver Status</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Receiver Status:</h6>
+                        <a class="collapse-item ac" href="activity.html">Activity</a>
+                        <a class="collapse-item" href="position.html">Position</a>
+                        <a class="collapse-item" href="graphs.html">Graphs</a>
+                        <a class="collapse-item" href="vector.html">Vector</a>
+                        <a class="collapse-item" href="identity.html">Identity</a>
+                        <!--                        <a class="collapse-item" href="receiver.html">Receiver</a>-->
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="satel nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="i-font fas fa-fw fa-wrench icon-feed"></i>
+                    <span class="span-icon">Satellites</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Satellites:</h6>
+                        <a class="collapse-item" href="general.html">General</a>
+                        <a class="collapse-item track" href="tracking.html">Tracking</a>
+                        <a class="collapse-item" href="enable-disable.html">Enable/Disable</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Heading -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                    <i class="i-font fas fa-fw fa-folder icon-cogs"></i>
+                    <span class="span-icon">Receiver Configuration</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Res Config:</h6>
+                        <a class="collapse-item" href="summer.html">Summar</a>
+                        <a class="collapse-item" href="attena.html">Attena</a>
+                        <a class="collapse-item" href="reference.html">Reference Station</a>
+                        <a class="collapse-item" href="receiver-tracking.html">Tracking</a>
+                        <a class="collapse-item" href="correction.html">Correction Controls</a>
+                        <a class="collapse-item" href="receiver-position.html">Position</a>
+                        <a class="collapse-item" href="rest.html">Rest</a>
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="network.html">
+                    <i class="i-font fas fa-fw icon-tree"></i>
+                    <span class="span-icon">Network Configuration</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="i-o.html">
+                    <i class="i-font fas fa-fw icon-loop"></i>
+                    <span class="span-icon">I/O Configuration</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="security.html">
+                    <i class="i-font fas fa-fw icon-lock"></i>
+                    <span class="span-icon">Security</span></a>
+            </li>
+            <!--            <hr class="sidebar-divider">-->
+            <!-- Nav Item - Tables -->
+
+            <!-- Divider -->
+            <!--        <hr class="sidebar-divider d-none d-md-block">-->
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content" class="bg-gray-800">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-gray-900 topbar mb-4 static-top shadow">
+                    <div class="filter-cadr col-md-3 no-arrow">
+                        <span class="icon-filter">
+                        </span>
+                        <i class="text-gray-200">Filters</i>
+                        <span class="ctrl icon-ctrl"></span>
+                    </div>
+                    <div class="dashboard col-md-5">
+                        <p class="text-gray-200">Dashboard</p>
+                    </div>
+                    <div class="time col-md-4">
+                        <div id="demo" class="col-md-7 text-gray-200">
+                        </div>
+                        <div class="user-panel col-md-5">
+                            <span class="user icon-user col-md-12 text-gray-200"></span>
+                        </div>
+                    </div>
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <div class="input-group-append">
+                            </div>
+                        </div>
+                    </form>
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row mb-3">
+                        <div class="main-parent container bg-gray-600 col-xl-12">
+                            <p class="form-text h2"> Stellites-Tracking</p>
+                            <div class="container">
+                                <ul class="nav nav-tabs col-12">
+                                    <li class="sub active col-md-4" onclick="Tabs(event, 'table')">
+                                        <a href="javascript:void(0)">( Table )</a>
+                                    </li>
+                                    <li class="sub col-md-4" onclick="Tabs(event, 'graph')">
+                                        <a href="javascript:void(0)">( Graph )</a>
+                                    </li>
+                                    <li class="sub col-md-4" onclick="Tabs(event, 'skyplot')">
+                                        <a href="javascript:void(0)">( skyplot )</a>
+                                    </li>
+                                </ul>
+                                <div id="table" class="tabContent" style="display:block">
+                                    <div class="col-md-12">
+                                        <div class="container-fluid">
+
+                                            <!-- Page Heading -->
+                                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                            </div>
+
+                                            <!-- Content Row -->
+                                            <div class="row mb-3">
+                                                <div class="main-parent container bg-gray-600 col-xl-12">
+                                                    <p class="form-text h2">Table</p>
+                                                    <div class="container">
+                                                        <ul class="nav nav-tabs col-12">
+                                                            <li class="sub active col-md-2" onclick="Tab(event, 'gps')">
+                                                                <a href="javascript:void(0)">GPS</a>
+                                                            </li>
+                                                            <li class="sub col-md-2" onclick="Tab(event, 'glonass')">
+                                                                <a href="javascript:void(0)">GLONASS</a>
+                                                            </li>
+                                                            <li class="sub col-md-2" onclick="Tab(event, 'galileo')">
+                                                                <a href="javascript:void(0)">Galileo</a>
+                                                            </li>
+                                                            <li class="sub col-md-2" onclick="Tab(event, 'beidou')">
+                                                                <a href="javascript:void(0)">BeiDou</a>
+                                                            </li>
+                                                            <li class="sub col-md-2" onclick="Tab(event, 'qzss')">
+                                                                <a href="javascript:void(0)">QZSS</a>
+                                                            </li>
+                                                            <li class="sub col-md-2" onclick="Tab(event, 'sbas')">
+                                                                <a href="javascript:void(0)">SBAS</a>
+                                                            </li>
+                                                        </ul>
+                                                        <div id="gps" class="tabContents" style="display:block">
+                                                            <div class="col-md-12">
+                                                                <table id="trackingTable" class="col-md-12 svs" cellspacing="0" cellpadding="3" width="">
+                                                                    <tbody>
+                                                                        <tr class="gen">
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','prn');">SV</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('str','sys');">Type</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','elev');">Elev.<br>[Deg]</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','azi');">Azim.<br>[Deg]</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','l1_cno');">L1-C/No<br>[dBHz]</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;">L1</th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','l2_cno');">L2-C/No<br>[dBHz]</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;">L2</th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','l5_cno');">L5-C/No<br>[dBHz]</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;">L5</th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','iode');">IODE</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','ura');">URA<br>[m]</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('str','type');">Type</a></th>
+                                                                        </tr>
+                                                                        <tr class="odd">
+                                                                            <td class="svs" style="font-size: 14px;"><a href="javascript:parent.showHelp('infoPRN.html?type=GPS&amp;sv=2','2')">2</a></td>
+                                                                            <td class="svs" style="font-size: 14px;">GPS</td>
+                                                                            <td class="svs" style="font-size: 14px;">41.00</td>
+                                                                            <td class="svs" style="font-size: 14px;">61.13</td>
+                                                                            <td class="svs" style="font-size: 14px;">46.0</td>
+                                                                            <td class="svs" style="font-size: 14px;">CA</td>
+                                                                            <td class="svs" style="font-size: 14px;">36.3</td>
+                                                                            <td class="svs" style="font-size: 14px;">E</td>
+                                                                            <td class="svs" style="font-size: 14px;">-</td>
+                                                                            <td class="svs" style="font-size: 14px;">-</td>
+                                                                            <td class="svs" style="font-size: 14px;">21</td>
+                                                                            <td class="svs" style="font-size: 14px;"> 2 </td>
+                                                                            <td class="svs" style="font-size: 14px;">IIR</td>
+                                                                        </tr>
+                                                                        <tr class="">
+                                                                            <td class="svs" style="font-size: 14px;"><a href="javascript:parent.showHelp('infoPRN.html?type=GPS&amp;sv=5','5')">5</a></td>
+                                                                            <td class="svs" style="font-size: 14px;">GPS</td>
+                                                                            <td class="svs" style="font-size: 14px;">72.16</td>
+                                                                            <td class="svs" style="font-size: 14px;">98.58</td>
+                                                                            <td class="svs" style="font-size: 14px;">50.3</td>
+                                                                            <td class="svs" style="font-size: 14px;">CA</td>
+                                                                            <td class="svs" style="font-size: 14px;">48.2</td>
+                                                                            <td class="svs" style="font-size: 14px;">CM+CL</td>
+                                                                            <td class="svs" style="font-size: 14px;">-</td>
+                                                                            <td class="svs" style="font-size: 14px;">-</td>
+                                                                            <td class="svs" style="font-size: 14px;">4</td>
+                                                                            <td class="svs" style="font-size: 14px;"> 2 </td>
+                                                                            <td class="svs" style="font-size: 14px;">IIR-M</td>
+                                                                        </tr>
+                                                                        <tr class="odd">
+                                                                            <td class="svs" style="font-size: 14px;"><a href="javascript:parent.showHelp('infoPRN.html?type=GPS&amp;sv=12','12')">12</a></td>
+                                                                            <td class="svs" style="font-size: 14px;">GPS</td>
+                                                                            <td class="svs" style="font-size: 14px;">30.16</td>
+                                                                            <td class="svs" style="font-size: 14px;">185.71</td>
+                                                                            <td class="svs" style="font-size: 14px;">47.8</td>
+                                                                            <td class="svs" style="font-size: 14px;">CA</td>
+                                                                            <td class="svs" style="font-size: 14px;">42.7</td>
+                                                                            <td class="svs" style="font-size: 14px;">CM+CL</td>
+                                                                            <td class="svs" style="font-size: 14px;">-</td>
+                                                                            <td class="svs" style="font-size: 14px;">-</td>
+                                                                            <td class="svs" style="font-size: 14px;">72</td>
+                                                                            <td class="svs" style="font-size: 14px;"> 2 </td>
+                                                                            <td class="svs" style="font-size: 14px;">IIR-M</td>
+                                                                        </tr>
+                                                                        <tr class="">
+                                                                            <td class="svs" style="font-size: 14px;"><a href="javascript:parent.showHelp('infoPRN.html?type=GPS&amp;sv=21','21')">21</a></td>
+                                                                            <td class="svs" style="font-size: 14px;">GPS</td>
+                                                                            <td class="svs" style="font-size: 14px;">10.81</td>
+                                                                            <td class="svs" style="font-size: 14px;">265.63</td>
+                                                                            <td class="svs" style="font-size: 14px;">37.2</td>
+                                                                            <td class="svs" style="font-size: 14px;">CA</td>
+                                                                            <td class="svs" style="font-size: 14px;">22.3</td>
+                                                                            <td class="svs" style="font-size: 14px;">E</td>
+                                                                            <td class="svs" style="font-size: 14px;">-</td>
+                                                                            <td class="svs" style="font-size: 14px;">-</td>
+                                                                            <td class="svs" style="font-size: 14px;">17</td>
+                                                                            <td class="svs" style="font-size: 14px;"> 2 </td>
+                                                                            <td class="svs" style="font-size: 14px;">IIR</td>
+                                                                        </tr>
+                                                                        <tr class="odd">
+                                                                            <td class="svs" style="font-size: 14px;"><a href="javascript:parent.showHelp('infoPRN.html?type=GPS&amp;sv=25','25')">25</a></td>
+                                                                            <td class="svs" style="font-size: 14px;">GPS</td>
+                                                                            <td class="svs" style="font-size: 14px;">50.31</td>
+                                                                            <td class="svs" style="font-size: 14px;">240.95</td>
+                                                                            <td class="svs" style="font-size: 14px;">47.0</td>
+                                                                            <td class="svs" style="font-size: 14px;">CA</td>
+                                                                            <td class="svs" style="font-size: 14px;">46.7</td>
+                                                                            <td class="svs" style="font-size: 14px;">CM+CL</td>
+                                                                            <td class="svs" style="font-size: 14px;">48.0</td>
+                                                                            <td class="svs" style="font-size: 14px;">I+Q</td>
+                                                                            <td class="svs" style="font-size: 14px;">67</td>
+                                                                            <td class="svs" style="font-size: 14px;"> 2 </td>
+                                                                            <td class="svs" style="font-size: 14px;">IIF</td>
+                                                                        </tr>
+                                                                        <tr class="">
+                                                                            <td class="svs" style="font-size: 14px;"><a href="javascript:parent.showHelp('infoPRN.html?type=GPS&amp;sv=29','29')">29</a></td>
+                                                                            <td class="svs" style="font-size: 14px;">GPS</td>
+                                                                            <td class="svs" style="font-size: 14px;">51.70</td>
+                                                                            <td class="svs" style="font-size: 14px;">316.73</td>
+                                                                            <td class="svs" style="font-size: 14px;">49.5</td>
+                                                                            <td class="svs" style="font-size: 14px;">CA</td>
+                                                                            <td class="svs" style="font-size: 14px;">47.3</td>
+                                                                            <td class="svs" style="font-size: 14px;">CM+CL</td>
+                                                                            <td class="svs" style="font-size: 14px;">-</td>
+                                                                            <td class="svs" style="font-size: 14px;">-</td>
+                                                                            <td class="svs" style="font-size: 14px;">16</td>
+                                                                            <td class="svs" style="font-size: 14px;"> 2 </td>
+                                                                            <td class="svs" style="font-size: 14px;">IIR-M</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table class="">
+
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div id="glonass" class=" tabContents">
+                                                            <table id="trackingTable" class="svs" cellspacing="0" cellpadding="3" width="486px">
+                                                                <tbody>
+                                                                    <tr class="gen">
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','prn');">SV</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('str','sys');">Type</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','elev');">Elev.<br>[Deg]</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','azi');">Azim.<br>[Deg]</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','l1_cno');">L1-C/No<br>[dBHz]</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;">L1</th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','l2_cno');">L2-C/No<br>[dBHz]</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;">L2</th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','iode');">IODE</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','ura');">URA<br>[m]</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('str','type');">Type</a></th>
+                                                                    </tr>
+                                                                    <tr class="odd">
+                                                                        <td class="svs" style="font-size: 14px;">2</td>
+                                                                        <td class="svs" style="font-size: 14px;">GLONASS</td>
+                                                                        <td class="svs" style="font-size: 14px;">22.52</td>
+                                                                        <td class="svs" style="font-size: 14px;">32.63</td>
+                                                                        <td class="svs" style="font-size: 14px;">46.1/44.6</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA/P</td>
+                                                                        <td class="svs" style="font-size: 14px;">40.4</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA</td>
+                                                                        <td class="svs" style="font-size: 14px;">65</td>
+                                                                        <td class="svs" style="font-size: 14px;">2</td>
+                                                                        <td class="svs" style="font-size: 14px;">M</td>
+                                                                    </tr>
+                                                                    <tr class="">
+                                                                        <td class="svs" style="font-size: 14px;">3</td>
+                                                                        <td class="svs" style="font-size: 14px;">GLONASS</td>
+                                                                        <td class="svs" style="font-size: 14px;">57.17</td>
+                                                                        <td class="svs" style="font-size: 14px;">90.73</td>
+                                                                        <td class="svs" style="font-size: 14px;">49.3/49.2</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA/P</td>
+                                                                        <td class="svs" style="font-size: 14px;">46.3</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA</td>
+                                                                        <td class="svs" style="font-size: 14px;">65</td>
+                                                                        <td class="svs" style="font-size: 14px;">2.5</td>
+                                                                        <td class="svs" style="font-size: 14px;">M</td>
+                                                                    </tr>
+                                                                    <tr class="odd">
+                                                                        <td class="svs" style="font-size: 14px;">9</td>
+                                                                        <td class="svs" style="font-size: 14px;">GLONASS</td>
+                                                                        <td class="svs" style="font-size: 14px;">23.08</td>
+                                                                        <td class="svs" style="font-size: 14px;">291.93</td>
+                                                                        <td class="svs" style="font-size: 14px;">47.2/45.8</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA/P</td>
+                                                                        <td class="svs" style="font-size: 14px;">42.0</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA</td>
+                                                                        <td class="svs" style="font-size: 14px;">65</td>
+                                                                        <td class="svs" style="font-size: 14px;">2</td>
+                                                                        <td class="svs" style="font-size: 14px;">M</td>
+                                                                    </tr>
+                                                                    <tr class="">
+                                                                        <td class="svs" style="font-size: 14px;">16</td>
+                                                                        <td class="svs" style="font-size: 14px;">GLONASS</td>
+                                                                        <td class="svs" style="font-size: 14px;">11.71</td>
+                                                                        <td class="svs" style="font-size: 14px;">231.30</td>
+                                                                        <td class="svs" style="font-size: 14px;">40.3/39.2</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA/P</td>
+                                                                        <td class="svs" style="font-size: 14px;">34.2</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA</td>
+                                                                        <td class="svs" style="font-size: 14px;">65</td>
+                                                                        <td class="svs" style="font-size: 14px;">4</td>
+                                                                        <td class="svs" style="font-size: 14px;">M</td>
+                                                                    </tr>
+                                                                    <tr class="odd">
+                                                                        <td class="svs" style="font-size: 14px;">17</td>
+                                                                        <td class="svs" style="font-size: 14px;">GLONASS</td>
+                                                                        <td class="svs" style="font-size: 14px;">15.79</td>
+                                                                        <td class="svs" style="font-size: 14px;">93.70</td>
+                                                                        <td class="svs" style="font-size: 14px;">40.1/40.1</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA/P</td>
+                                                                        <td class="svs" style="font-size: 14px;">40.0</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA</td>
+                                                                        <td class="svs" style="font-size: 14px;">65</td>
+                                                                        <td class="svs" style="font-size: 14px;">5</td>
+                                                                        <td class="svs" style="font-size: 14px;">M</td>
+                                                                    </tr>
+                                                                    <tr class="">
+                                                                        <td class="svs" style="font-size: 14px;">18</td>
+                                                                        <td class="svs" style="font-size: 14px;">GLONASS</td>
+                                                                        <td class="svs" style="font-size: 14px;">54.04</td>
+                                                                        <td class="svs" style="font-size: 14px;">50.68</td>
+                                                                        <td class="svs" style="font-size: 14px;">49.3/49.2</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA/P</td>
+                                                                        <td class="svs" style="font-size: 14px;">46.6</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA</td>
+                                                                        <td class="svs" style="font-size: 14px;">65</td>
+                                                                        <td class="svs" style="font-size: 14px;">5</td>
+                                                                        <td class="svs" style="font-size: 14px;">M</td>
+                                                                    </tr>
+                                                                    <tr class="odd">
+                                                                        <td class="svs" style="font-size: 14px;">19</td>
+                                                                        <td class="svs" style="font-size: 14px;">GLONASS</td>
+                                                                        <td class="svs" style="font-size: 14px;">44.01</td>
+                                                                        <td class="svs" style="font-size: 14px;">325.58</td>
+                                                                        <td class="svs" style="font-size: 14px;">38.8/37.5</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA/P</td>
+                                                                        <td class="svs" style="font-size: 14px;">44.3</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA</td>
+                                                                        <td class="svs" style="font-size: 14px;">65</td>
+                                                                        <td class="svs" style="font-size: 14px;">5</td>
+                                                                        <td class="svs" style="font-size: 14px;">M</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div id="galileo" class=" tabContents">
+                                                            <table id="trackingTable" class="svs" cellspacing="0" cellpadding="3" width="486px">
+                                                                <tbody>
+                                                                    <tr class="gen">
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','prn');">SV</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('str','sys');">Type</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','elev');">Elev.<br>[Deg]</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','azi');">Azim.<br>[Deg]</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','l1_cno');">L1-C/No<br>[dBHz]</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;">L1</th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','l5_cno');">L5-C/No<br>[dBHz]</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;">L5</th>
+                                                                    </tr>
+                                                                    <tr class="odd">
+                                                                        <td class="svs" style="font-size: 14px;">3</td>
+                                                                        <td class="svs" style="font-size: 14px;">Galileo</td>
+                                                                        <td class="svs" style="font-size: 14px;">33.23</td>
+                                                                        <td class="svs" style="font-size: 14px;">149.44</td>
+                                                                        <td class="svs" style="font-size: 14px;">47.3</td>
+                                                                        <td class="svs" style="font-size: 14px;">CBOC</td>
+                                                                        <td class="svs" style="font-size: 14px;">44.0/44.4/46.5</td>
+                                                                        <td class="svs" style="font-size: 14px;">A/B/Alt</td>
+                                                                    </tr>
+                                                                    <tr class="">
+                                                                        <td class="svs" style="font-size: 14px;">5</td>
+                                                                        <td class="svs" style="font-size: 14px;">Galileo</td>
+                                                                        <td class="svs" style="font-size: 14px;">39.48</td>
+                                                                        <td class="svs" style="font-size: 14px;">82.18</td>
+                                                                        <td class="svs" style="font-size: 14px;">47.7</td>
+                                                                        <td class="svs" style="font-size: 14px;">CBOC</td>
+                                                                        <td class="svs" style="font-size: 14px;">43.5/44.5/46.6</td>
+                                                                        <td class="svs" style="font-size: 14px;">A/B/Alt</td>
+                                                                    </tr>
+                                                                    <tr class="odd">
+                                                                        <td class="svs" style="font-size: 14px;">9</td>
+                                                                        <td class="svs" style="font-size: 14px;">Galileo</td>
+                                                                        <td class="svs" style="font-size: 14px;">10.54</td>
+                                                                        <td class="svs" style="font-size: 14px;">36.34</td>
+                                                                        <td class="svs" style="font-size: 14px;">42.5</td>
+                                                                        <td class="svs" style="font-size: 14px;">CBOC</td>
+                                                                        <td class="svs" style="font-size: 14px;">40.4/39.6/43.0</td>
+                                                                        <td class="svs" style="font-size: 14px;">A/B/Alt</td>
+                                                                    </tr>
+                                                                    <tr class="">
+                                                                        <td class="svs" style="font-size: 14px;">15</td>
+                                                                        <td class="svs" style="font-size: 14px;">Galileo</td>
+                                                                        <td class="svs" style="font-size: 14px;">55.24</td>
+                                                                        <td class="svs" style="font-size: 14px;">311.04</td>
+                                                                        <td class="svs" style="font-size: 14px;">47.8</td>
+                                                                        <td class="svs" style="font-size: 14px;">CBOC</td>
+                                                                        <td class="svs" style="font-size: 14px;">48.1/49.2/51.3</td>
+                                                                        <td class="svs" style="font-size: 14px;">A/B/Alt</td>
+                                                                    </tr>
+                                                                    <tr class="odd">
+                                                                        <td class="svs" style="font-size: 14px;">21</td>
+                                                                        <td class="svs" style="font-size: 14px;">Galileo</td>
+                                                                        <td class="svs" style="font-size: 14px;">11.95</td>
+                                                                        <td class="svs" style="font-size: 14px;">321.81</td>
+                                                                        <td class="svs" style="font-size: 14px;">41.9</td>
+                                                                        <td class="svs" style="font-size: 14px;">CBOC</td>
+                                                                        <td class="svs" style="font-size: 14px;">40.2/41.5/43.6</td>
+                                                                        <td class="svs" style="font-size: 14px;">A/B/Alt</td>
+                                                                    </tr>
+                                                                    <tr class="">
+                                                                        <td class="svs" style="font-size: 14px;">27</td>
+                                                                        <td class="svs" style="font-size: 14px;">Galileo</td>
+                                                                        <td class="svs" style="font-size: 14px;">31.24</td>
+                                                                        <td class="svs" style="font-size: 14px;">271.34</td>
+                                                                        <td class="svs" style="font-size: 14px;">47.2</td>
+                                                                        <td class="svs" style="font-size: 14px;">CBOC</td>
+                                                                        <td class="svs" style="font-size: 14px;">43.6/45.3/47.0</td>
+                                                                        <td class="svs" style="font-size: 14px;">A/B/Alt</td>
+                                                                    </tr>
+                                                                    <tr class="odd">
+                                                                        <td class="svs" style="font-size: 14px;">30</td>
+                                                                        <td class="svs" style="font-size: 14px;">Galileo</td>
+                                                                        <td class="svs" style="font-size: 14px;">20.79</td>
+                                                                        <td class="svs" style="font-size: 14px;">214.82</td>
+                                                                        <td class="svs" style="font-size: 14px;">43.2</td>
+                                                                        <td class="svs" style="font-size: 14px;">CBOC</td>
+                                                                        <td class="svs" style="font-size: 14px;">41.5/42.4/44.5</td>
+                                                                        <td class="svs" style="font-size: 14px;">A/B/Alt</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div id="beidou" class="col-md-12 tabContents">
+                                                            <span id="trackingSpan">
+                                                                <table id="trackingTable" class="col-md-12 svs" cellspacing="0" cellpadding="3" width="486px">
+                                                                    <tbody class="col-md-12">
+                                                                        <tr class="gen">
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','prn');">SV</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('str','sys');">Type</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','elev');">Elev.<br>[Deg]</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','azi');">Azim.<br>[Deg]</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','l1_cno');">L1-C/No<br>[dBHz]</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;">L1</th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','iode');">IODE</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','ura');">URA<br>[m]</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('str','type');">Type</a></th>
+                                                                        </tr>
+                                                                        <tr class="odd">
+                                                                            <td class="svs" style="font-size: 14px;">19</td>
+                                                                            <td class="svs" style="font-size: 14px;">BeiDou</td>
+                                                                            <td class="svs" style="font-size: 14px;">10.18</td>
+                                                                            <td class="svs" style="font-size: 14px;">200.15</td>
+                                                                            <td class="svs" style="font-size: 14px;">39.4</td>
+                                                                            <td class="svs" style="font-size: 14px;">B1</td>
+                                                                            <td class="svs" style="font-size: 14px;">-</td>
+                                                                            <td class="svs" style="font-size: 14px;">-</td>
+                                                                            <td class="svs" style="font-size: 14px;">MEO</td>
+                                                                        </tr>
+                                                                        <tr class="">
+                                                                            <td class="svs" style="font-size: 14px;">20</td>
+                                                                            <td class="svs" style="font-size: 14px;">BeiDou</td>
+                                                                            <td class="svs" style="font-size: 14px;">53.34</td>
+                                                                            <td class="svs" style="font-size: 14px;">167.31</td>
+                                                                            <td class="svs" style="font-size: 14px;">46.6</td>
+                                                                            <td class="svs" style="font-size: 14px;">B1</td>
+                                                                            <td class="svs" style="font-size: 14px;">1</td>
+                                                                            <td class="svs" style="font-size: 14px;">2.4</td>
+                                                                            <td class="svs" style="font-size: 14px;">MEO</td>
+                                                                        </tr>
+                                                                        <tr class="odd">
+                                                                            <td class="svs" style="font-size: 14px;">29</td>
+                                                                            <td class="svs" style="font-size: 14px;">BeiDou</td>
+                                                                            <td class="svs" style="font-size: 14px;">56.06</td>
+                                                                            <td class="svs" style="font-size: 14px;">316.39</td>
+                                                                            <td class="svs" style="font-size: 14px;">45.5</td>
+                                                                            <td class="svs" style="font-size: 14px;">B1</td>
+                                                                            <td class="svs" style="font-size: 14px;">1</td>
+                                                                            <td class="svs" style="font-size: 14px;">2.4</td>
+                                                                            <td class="svs" style="font-size: 14px;">MEO</td>
+                                                                        </tr>
+                                                                        <tr class="">
+                                                                            <td class="svs" style="font-size: 14px;">30</td>
+                                                                            <td class="svs" style="font-size: 14px;">BeiDou</td>
+                                                                            <td class="svs" style="font-size: 14px;">60.81</td>
+                                                                            <td class="svs" style="font-size: 14px;">93.06</td>
+                                                                            <td class="svs" style="font-size: 14px;">47.0</td>
+                                                                            <td class="svs" style="font-size: 14px;">B1</td>
+                                                                            <td class="svs" style="font-size: 14px;">1</td>
+                                                                            <td class="svs" style="font-size: 14px;">2.4</td>
+                                                                            <td class="svs" style="font-size: 14px;">MEO</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </span>
+                                                        </div>
+                                                        <div id="qzss" class=" tabContents">
+                                                            <span id="trackingSpan">
+                                                                <table id="trackingTable" class="svs" cellspacing="0" cellpadding="3" width="486px">
+                                                                    <tbody>
+                                                                        <tr class="gen">
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','prn');">SV</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('str','sys');">Type</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','elev');">Elev.<br>[Deg]</a></th>
+                                                                            <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','azi');">Azim.<br>[Deg]</a></th>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </span>
+                                                        </div>
+                                                        <div id="sbas" class=" tabContents">
+                                                            <table id="trackingTable" class="svs" cellspacing="0" cellpadding="3" width="486px">
+                                                                <tbody>
+                                                                    <tr class="gen">
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','prn');">SV</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('str','sys');">Type</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','elev');">Elev.<br>[Deg]</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','azi');">Azim.<br>[Deg]</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','l1_cno');">L1-C/No<br>[dBHz]</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;">L1</th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','iode');">IODE</a></th>
+                                                                        <th class="svs" style="font-size: 10.5px;"><a href="javascript:setSort('num','ura');">URA<br>[m]</a></th>
+                                                                    </tr>
+                                                                    <tr class="odd">
+                                                                        <td class="svs" style="font-size: 14px;">131</td>
+                                                                        <td class="svs" style="font-size: 14px;">SBAS</td>
+                                                                        <td class="svs" style="font-size: 14px;">42.25</td>
+                                                                        <td class="svs" style="font-size: 14px;">198.19</td>
+                                                                        <td class="svs" style="font-size: 14px;">43.0</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA</td>
+                                                                        <td class="svs" style="font-size: 14px;">41</td>
+                                                                        <td class="svs" style="font-size: 14px;"> 2 </td>
+                                                                    </tr>
+                                                                    <tr class="">
+                                                                        <td class="svs" style="font-size: 14px;">138</td>
+                                                                        <td class="svs" style="font-size: 14px;">SBAS</td>
+                                                                        <td class="svs" style="font-size: 14px;">43.82</td>
+                                                                        <td class="svs" style="font-size: 14px;">183.42</td>
+                                                                        <td class="svs" style="font-size: 14px;">45.3</td>
+                                                                        <td class="svs" style="font-size: 14px;">CA</td>
+                                                                        <td class="svs" style="font-size: 14px;">214</td>
+                                                                        <td class="svs" style="font-size: 14px;"> 2 </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="graph" class="tabContent">
+                                    <p class="form-text h2">Graph</p>
+                                    <div id="systemsDiv"><b>Type:</b>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox" name="sys_GPS" id="sys_GPS" onclick="updateSignals()" checked="on">GPS (G)</td>
+                                                    <td><input type="checkbox" name="sys_SBAS" id="sys_SBAS" onclick="updateSignals()" checked="on">SBAS (S)</td>
+                                                    <td><input type="checkbox" name="sys_Glonass" id="sys_Glonass" onclick="updateSignals()" checked="on">GLONASS (R)</td>
+                                                    <td><input type="checkbox" name="sys_Galileo" id="sys_Galileo" onclick="updateSignals()" checked="on">Galileo (E)</td>
+                                                    <td><input type="checkbox" name="sys_Beidou" id="sys_Beidou" onclick="updateSignals()" checked="on">BeiDou (B)</td>
+                                                    <td><input type="checkbox" name="sys_QZSS" id="sys_QZSS" onclick="updateSignals()" checked="on">QZSS (J)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="signalsDiv">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="border-left:solid 16px #0000ff"><input type="checkbox" name="signal_L1_0" id="signal_L1_0" onclick="updateSignals()" checked="on">L1 CA/BOC</td>
+                                                    <td style="border-left:solid 16px #00f000"><input type="checkbox" name="signal_L1EP_0" id="signal_L1EP_0" onclick="updateSignals()">L1 P</td>
+                                                    <td style="border-left:solid 16px #00ffff"><input type="checkbox" name="signal_L1C_0" id="signal_L1C_0" onclick="updateSignals()">L1C</td>
+                                                    <td style="border-left:solid 16px #ff0000"><input type="checkbox" name="signal_L2EP_0" id="signal_L2EP_0" onclick="updateSignals()">L2 E</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border-left:solid 16px #ffa500"><input type="checkbox" name="signal_L2C_0" id="signal_L2C_0" onclick="updateSignals()">L2 C/CA / B2</td>
+                                                    <td style="border-left:solid 16px #aa8866"><input type="checkbox" name="signal_E5Alt_0" id="signal_E5Alt_0" onclick="updateSignals()">E5-AltBOC</td>
+                                                    <td style="border-left:solid 16px #6688aa"><input type="checkbox" name="signal_E5B_0" id="signal_E5B_0" onclick="updateSignals()">L3 / E5B</td>
+                                                    <td style="border-left:solid 16px #ff00ff"><input type="checkbox" name="signal_L5_0" id="signal_L5_0" onclick="updateSignals()">L5 / E5A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border-left:solid 16px #f0e68c"><input type="checkbox" name="signal_L1SLAS_0" id="signal_L1SLAS_0" onclick="updateSignals()">L1S</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <svg class="col-md-12" height="350">
+                                        <defs></defs><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="70" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-10.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">R2</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="70" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">16°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="115.86206896551724" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-10.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G2</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="115.86206896551724" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">31°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="161.72413793103448" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-10.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">R3</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="161.72413793103448" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">57°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="207.58620689655172" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-9.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E3</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="207.58620689655172" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">37°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="253.44827586206895" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-10.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G5</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="253.44827586206895" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">64°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="299.31034482758616" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-9.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E5</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="299.31034482758616" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">40°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="345.17241379310343" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-10.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">R9</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="345.17241379310343" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">20°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="391.0344827586207" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G12</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="391.0344827586207" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">16°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="436.8965517241379" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G13</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="436.8965517241379" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">19°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="482.7586206896551" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E13</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="482.7586206896551" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-11.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">11°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="528.6206896551723" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G15</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="528.6206896551723" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">15°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="574.4827586206897" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E15</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="574.4827586206897" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">57°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="620.3448275862069" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">R17</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="620.3448275862069" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-11.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">11°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="666.2068965517241" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">R18</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="666.2068965517241" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">51°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="712.0689655172414" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">R19</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="712.0689655172414" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">49°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="757.9310344827586" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">B19</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="757.9310344827586" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">13°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="803.7931034482758" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">B20</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="803.7931034482758" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">56°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="849.655172413793" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G21</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="849.655172413793" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">21°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="895.5172413793102" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E21</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="895.5172413793102" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">13°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="941.3793103448276" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G25</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="941.3793103448276" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">39°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="987.2413793103448" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G26</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="987.2413793103448" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-11.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">11°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1033.1034482758619" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E27</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1033.1034482758619" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">30°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1078.9655172413793" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-15.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">G29</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1078.9655172413793" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">66°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1124.8275862068965" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">B29</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1124.8275862068965" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">58°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1170.6896551724137" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">B30</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1170.6896551724137" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">59°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1216.551724137931" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-14.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">E30</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1216.551724137931" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">18°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1262.4137931034481" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-18.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">S131</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1262.4137931034481" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">42°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1308.2758620689654" y="330" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-18.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">S138</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1308.2758620689654" y="345" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-12.00000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">44°</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="310" text-anchor="center" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">10</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="256" text-anchor="center" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">20</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="202" text-anchor="center" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">30</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="148" text-anchor="center" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">40</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="94" text-anchor="center" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">50</text><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="0" y="40" text-anchor="center" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" font-style="normal" font-variant="normal" font-weight="normal" font-size="14px" font-family="Arial">60</text>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="70" y1="40" x2="70" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="115.86206896551724" y1="40" x2="115.86206896551724" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="161.72413793103448" y1="40" x2="161.72413793103448" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="207.58620689655172" y1="40" x2="207.58620689655172" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="253.44827586206895" y1="40" x2="253.44827586206895" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="299.31034482758616" y1="40" x2="299.31034482758616" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="345.17241379310343" y1="40" x2="345.17241379310343" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="391.0344827586207" y1="40" x2="391.0344827586207" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="436.8965517241379" y1="40" x2="436.8965517241379" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="482.7586206896551" y1="40" x2="482.7586206896551" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="528.6206896551723" y1="40" x2="528.6206896551723" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="574.4827586206897" y1="40" x2="574.4827586206897" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="620.3448275862069" y1="40" x2="620.3448275862069" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="666.2068965517241" y1="40" x2="666.2068965517241" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="712.0689655172414" y1="40" x2="712.0689655172414" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="757.9310344827586" y1="40" x2="757.9310344827586" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="803.7931034482758" y1="40" x2="803.7931034482758" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="849.655172413793" y1="40" x2="849.655172413793" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="895.5172413793102" y1="40" x2="895.5172413793102" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="941.3793103448276" y1="40" x2="941.3793103448276" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="987.2413793103448" y1="40" x2="987.2413793103448" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1033.1034482758619" y1="40" x2="1033.1034482758619" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1078.9655172413793" y1="40" x2="1078.9655172413793" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1124.8275862068965" y1="40" x2="1124.8275862068965" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1170.6896551724137" y1="40" x2="1170.6896551724137" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1216.551724137931" y1="40" x2="1216.551724137931" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1262.4137931034481" y1="40" x2="1262.4137931034481" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1308.2758620689654" y1="40" x2="1308.2758620689654" y2="315" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="30" y1="40" x2="30" y2="310" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="1360" y1="40" x2="1360" y2="310" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="40" x2="1360" y2="40" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="67" x2="1360" y2="67" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="94" x2="1360" y2="94" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="121" x2="1360" y2="121" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="148" x2="1360" y2="148" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="175" x2="1360" y2="175" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="202" x2="1360" y2="202" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="229" x2="1360" y2="229" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="256" x2="1360" y2="256" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="25" y1="283" x2="1360" y2="283" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <line fill="none" fill-opacity="0" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x1="30" y1="310" x2="1360" y2="310" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></line>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="55" y="122.61999999999998" width="30" height="187.38000000000002" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="100.86206896551724" y="115.6" width="30" height="194.4" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="146.72413793103448" y="98.85999999999999" width="30" height="211.14000000000001" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="192.58620689655172" y="109.11999999999998" width="30" height="200.88000000000002" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="238.44827586206895" y="97.24000000000001" width="30" height="212.76" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="284.31034482758616" y="103.72" width="30" height="206.28" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="330.17241379310343" y="131.26" width="30" height="178.74" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="376.0344827586207" y="123.16" width="30" height="186.84" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="421.8965517241379" y="142.06" width="30" height="167.94" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="467.7586206896551" y="149.61999999999998" width="30" height="160.38000000000002" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="513.6206896551723" y="130.72" width="30" height="179.28" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="559.4827586206897" y="102.63999999999999" width="30" height="207.36" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="605.3448275862069" y="136.66" width="30" height="173.34" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="651.2068965517241" y="96.16" width="30" height="213.84" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="697.0689655172414" y="144.76" width="30" height="165.24" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="742.9310344827586" y="159.88000000000002" width="30" height="150.11999999999998" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="788.7931034482758" y="104.25999999999999" width="30" height="205.74" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="834.655172413793" y="143.14000000000001" width="30" height="166.85999999999999" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="880.5172413793102" y="137.74" width="30" height="172.26" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="926.3793103448276" y="124.78000000000003" width="30" height="185.21999999999997" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="972.2413793103448" y="144.21999999999997" width="30" height="165.78000000000003" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1018.1034482758619" y="111.81999999999996" width="30" height="198.18000000000004" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1063.9655172413793" y="95.61999999999998" width="30" height="214.38000000000002" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1109.8275862068965" y="110.19999999999999" width="30" height="199.8" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1155.6896551724137" y="101.56" width="30" height="208.44" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1201.551724137931" y="122.61999999999998" width="30" height="187.38000000000002" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1247.4137931034481" y="129.64000000000001" width="30" height="180.35999999999999" ry="0" rx="0" fill-rule="evenodd"></rect>
+                                        <rect fill="rgb(0, 0, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="1293.2758620689654" y="117.21999999999997" width="30" height="192.78000000000003" ry="0" rx="0" fill-rule="evenodd"></rect><text fill="rgb(0, 0, 0)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="695" y="30" text-anchor="start" text-decoration="none" rotate="0" kerning="auto" text-rendering="optimizeLegibility" fill-rule="evenodd" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,-45.50000000,0.00000000)" font-style="normal" font-variant="normal" font-weight="bold" font-size="16px" font-family="Arial">C/No Vs. SV</text>
+                                    </svg>
+                                </div>
+                                <div id="skyplot" class=" tabContent">
+                                    <!--                                    <canvas id="SkyPlot" width="646.25" height="517" style="width: 646.25px; height: 517px;"></canvas>-->
+                                    <div class="col-lg-6 mb-4">
+                                        <div class="mahvare-2 col-md-12">
+                                            <div class="madar-dayere">
+                                                <div class="rect col-md-12">
+                                                    <div id="chart" style='width: 400px; height: 400px; padding-left: 5px; padding-bottom: 5px;'></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; Hiro Negar</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/morris/morris.min.js"></script>
+    <script src="js/raphael/raphael.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(".sub").click(function() {
+            $(this).css("background-color", "red");
+            $(this).children("a").css("color", "black");
+            $(this).siblings().css("background-color", "rgba(0, 0, 0, 0.81)");
+            $(this).siblings().children("a").css("color", "white");
+        })
+        var p = new Date();
+        document.getElementById("demo").innerHTML = p.toUTCString();
+        $("#sidebarToggle").click(function() {
+            $(".span-icon").toggleClass("display-none");
+            $(".i-font").toggleClass("font-size");
+            $(this).toggleClass("mt");
+        })
+//        $(".sub").click(function(){
+//            $(this).css("background-color" : "white" , "color" , "black");
+//        })
+        $(window).bind("load", function() {
+            var x = window.outerWidth;
+            if (x <= 898) {
+                document.getElementById("demo").style.display = "none";
+                document.getElementById("box-3").style.display = "none";
+                document.getElementById("box-4").style.display = "none";
+            }
+            if (x > 773) {}
+            document.querySelector(".main").classList.remove("left-Class-8");
+        });
+        window.addEventListener("resize", () => {
+            var x = window.outerWidth;
+            if (x <= 898) {
+                document.getElementById("demo").style.display = "none";
+                //                document.getElementById("box-3").style.display = "none";
+                //                document.getElementById("box-4").style.display = "none";
+            }
+            if (x > 898) {
+                document.getElementById("demo").style.display = "block";
+                //                document.getElementById("box-3").style.display = "block";
+                //                document.getElementById("box-4").style.display = "block";
+            }
+        })
+//                document.getElementById("time").innerHTML = d.toUTCString();
+        function Tabs(evt, title) {
+
+            var tabcontent = document.getElementsByClassName("tabContent");
+
+            //for hide last content that clicked
+
+            for (var i = 0; i < tabcontent.length; i++) {
+
+                tabcontent[i].style.display = "none";
+
+            }
+
+            var tabtitile = document.getElementsByClassName("tabTitle");
+
+            //for inactive all tabs
+
+            for (var i = 0; i < tabtitile.length; i++) {
+
+                tabtitile[i].className = tabtitile[i].className.replace("active", "");
+
+            }
+
+            //show tabContetnt that has id equals title parameter
+
+            document.getElementById(title).style.display = "block"
+
+            //active clicked tab
+
+            //            evt.currentTarget.className += "active";
+
+        }
+
+
+        function Tab(evt, title) {
+
+            var tabcontent = document.getElementsByClassName("tabContents");
+
+            //for hide last content that clicked
+
+            for (var i = 0; i < tabcontent.length; i++) {
+
+                tabcontent[i].style.display = "none";
+
+            }
+
+            var tabtitile = document.getElementsByClassName("tabTitle");
+
+            //for inactive all tabs
+
+            for (var i = 0; i < tabtitile.length; i++) {
+
+                tabtitile[i].className = tabtitile[i].className.replace("active", "");
+
+            }
+
+            //show tabContetnt that has id equals title parameter
+
+            document.getElementById(title).style.display = "block"
+
+            //active clicked tab
+
+            //            evt.currentTarget.className += "active";
+
+        }
+        var deg2rad = Math.PI / 180;
+        var width = 400,
+            height = 350,
+            radius = Math.min(width, height) / 2 - 30;
+
+        var svg = d3.select("#chart").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        var r = d3.scale.linear()
+            .domain([90, 0])
+            .range([0, radius]);
+
+        var line = d3.svg.line.radial()
+            .radius(function(d) {
+                return r(d[1]);
+            })
+            .angle(function(d) {
+                return -d[0] + Math.PI / 2;
+            });
+
+        var gr = null;
+
+        createSkyplot();
+
+        var json = {
+            "type": "GSV",
+            "inView": [{
+                    "data": [1, 45, 90]
+                },
+                {
+                    "data": [3, 70, 225]
+                }
+            ]
+        };
+
+        updateSkyPlot(json);
+
+        function createSkyplot() {
+            //////////////////////			  
+            gr = svg.append("g")
+                .attr("class", "r axis")
+                .selectAll("g")
+                .data(r.ticks(5))
+                .enter().append("g");
+
+            gr.append("circle").attr("r", r).style('fill', 'white');
+
+            gr.append("text")
+                .attr("y", function(d) {
+                    return -r(d) - 4;
+                })
+                .attr("transform", "rotate(20)")
+                .style("text-anchor", "middle")
+                .style('fill', 'blue')
+                .text(function(d) {
+                    return d;
+                });
+            /////////////////////
+
+            /////////////////////
+            var ga = svg.append("g")
+                .attr("class", "a axis")
+                .selectAll("g")
+                .data(d3.range(0, 360, 45))
+                .enter().append("g")
+                .attr("transform", function(d) {
+                    return "rotate(" + (d - 90) + ")";
+                });
+
+            ga.append("line").attr("x2", radius).style('stroke', 'black').style('stroke-dasharray', '1,8');
+
+            ga.append("text")
+                .attr("x", radius + 6)
+                .attr("dy", ".35em")
+                .style("text-anchor", function(d) {
+                    return d < 360 && d > 90 ? "end" : null;
+                })
+                .attr("transform", function(d) {
+                    return d < 360 && d > 90 ? "rotate(180 " + (radius + 3) + ",0)" : null;
+                })
+                .text(function(d) {
+                    return d + "°";
+                });
+            /////////////////////
+        }
+
+        function updateSkyPlot(d) {
+            var pos = [];
+            var inview = d.inView;
+
+            for (var elem in inview) {
+                if (inview.hasOwnProperty(elem)) {
+                    // the azimuth should be in radians and substracted from (Math.PI/2)
+                    var d = [(Math.PI / 2) - inview[elem].data[2] * deg2rad, inview[elem].data[1]];
+                    pos.push(d);
+                }
+            }
+
+            var r = d3.scale.linear()
+                .domain([90, 0])
+                .range([0, radius]);
+
+            var line = d3.svg.line.radial()
+                .radius(function(d) {
+                    return r(d[1]);
+                })
+                .angle(function(d) {
+                    return -d[0] + Math.PI / 2;
+                });
+
+            var color = d3.scale.category20();
+
+            svg.selectAll('circle').remove();
+
+            gr.append("circle").attr("r", r).style('fill', 'white');
+
+            svg.selectAll("point").data(pos).enter().append("circle").attr("class", "point")
+                .attr("transform", function(d) {
+                    var coors = line([d]).slice(1).slice(0, -1);
+                    return "translate(" + coors + ")"
+                })
+                .attr("r", 8)
+                .attr("fill", function(d, i) {
+                    return color(i);
+                });
+
+        }
+    </script>
+
+</body></html>
